@@ -37,9 +37,11 @@ end
   # GET /llamadaslibres
   # GET /llamadaslibres.json
   def index
-
+    if (Llamadaslibre.exists?(id: params[:id]))
      @llamadas = Llamadaslibre.where("idReceptor = ?", current_user.id)
-
+    else
+     redirect_to "/"
+    end
   end
 
   # GET /llamadaslibres/1
