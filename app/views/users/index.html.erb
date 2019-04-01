@@ -1,0 +1,37 @@
+<div class="container ">
+    <h1>Lista de usuarios</h1><hr>
+      <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Email</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Estado</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @contador = 0 %>
+          <% @users.each do |user| %>
+          <% if (user.tipo != "admin" && user.email != current_user.email) %>
+          <tr <% if (user.estado == "activo") %> class="table-success" <% else %> class="table-danger" <%end%> >
+          <td><%= @contador = @contador + 1 %></td>
+          <td><%= user.email %></td>
+          <td><%= user.nombre %></td>
+          <td><%= user.apellido %></td>
+          <td><%= user.estado %></td>
+          <td>
+            <% if (user.estado == "activo") %>
+            <a href="/users/crearllamada/<%= user.id %>" class="btn btn-success btn-sm"> Llamar </a>
+            <%end%>
+          </td>
+          </tr>
+          <% end %>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
+<br>
+<br>

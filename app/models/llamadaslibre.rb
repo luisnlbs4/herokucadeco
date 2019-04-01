@@ -1,0 +1,2 @@
+class Llamadaslibre < ApplicationRecord
+end

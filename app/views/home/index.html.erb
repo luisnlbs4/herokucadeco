@@ -1,0 +1,10 @@
+<% if user_signed_in? %>
+<h1>Bienvenido <%= current_user.nombre %></h1>
+<%
+  current_user.estado = "activo"
+  current_user.save
+%>
+
+<% else %>
+<meta http-equiv="refresh" content="0; url= /users/sign_in" />
+<% end %>

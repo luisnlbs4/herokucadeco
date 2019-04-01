@@ -1,0 +1,29 @@
+
+<br><br><br>
+<div class="container pt-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-6 col-md-4">
+
+      <div class="card border-info text-center">
+        <div class="card-header">
+          <h4><strong>Bienvenido</strong></h4>
+        </div>
+        <div class="card-body">
+          <img src="http://www.socialbiblio.com/sites/default/files/expertos/persona2.png" width="40%">
+          <br><br>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" , class: "form-control mb-2", placeholder: "email" %>
+
+              <%= f.password_field :password, autocomplete: "current-password" , class: "form-control mb-2", placeholder: "password"%>
+
+            <div class="actions">
+              <%= f.submit "Ingresar" , class: "btn btn-primary btn-block mb-2" %>
+            </div>
+          <% end %>
+
+            <a href="/users/sign_up" class="float-left">Crear una cuenta </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

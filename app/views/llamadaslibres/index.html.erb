@@ -1,0 +1,27 @@
+
+
+
+<div class="container">
+  <h1>Llamadaslibres</h1>
+  <a class="btn btn-primary" href="/llamadaslibres"> Refrescar</a>
+  <hr>
+  <table class= "table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Emisor</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @llamadas.each do |llamadaslibre| %>
+        <tr>
+          <td><strong>Llamadas de :</strong></td>
+          <td><%= llamadaslibre.idEmisor %></td>
+          <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibre.id %>">Contestar</a>
+          <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibre.id %>" > Rechazar </a></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

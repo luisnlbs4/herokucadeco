@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idEmisor: MyString
+  idReceptor: MyString
+  idSala: MyString
+  estado: MyString
+
+two:
+  idEmisor: MyString
+  idReceptor: MyString
+  idSala: MyString
+  estado: MyString

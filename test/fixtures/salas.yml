@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  apikey: MyString
+  sessionID: MyText
+  token: MyText
+  minutos: 1
+
+two:
+  nombre: MyString
+  apikey: MyString
+  sessionID: MyText
+  token: MyText
+  minutos: 1

@@ -1,0 +1,37 @@
+<%= form_with(model: llamadaslibre, local: true) do |form| %>
+  <% if llamadaslibre.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(llamadaslibre.errors.count, "error") %> prohibited this llamadaslibre from being saved:</h2>
+
+      <ul>
+      <% llamadaslibre.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idEmisor %>
+    <%= form.text_field :idEmisor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idReceptor %>
+    <%= form.text_field :idReceptor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idSala %>
+    <%= form.text_field :idSala %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado %>
+    <%= form.text_field :estado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
