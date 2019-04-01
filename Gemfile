@@ -26,6 +26,9 @@ gem 'devise'
 gem 'bootsnap'
 
 gem 'listen'
+
+gem 'pg'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -44,9 +47,7 @@ group :development, :test do
 end
 
 group :production do
-
-  gem 'pg'
-	gem 'rails_12factor'
+  	gem 'rails_12factor'
 end
 
 
