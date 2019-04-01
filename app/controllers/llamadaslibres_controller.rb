@@ -40,7 +40,7 @@ end
     if (Llamadaslibre.exists?(idReceptor: current_user.id))
      @llamadas = Llamadaslibre.where("idReceptor = ?", current_user.id)
     else
-      @llamadas = [] 
+     redirect_to "/"
     end
   end
 
