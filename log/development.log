@@ -49568,3 +49568,2183 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-04-19 19:01:32 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 314ms (Views: 292.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:01:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 49ms (Views: 37.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "llamadaslibres"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "llamadaslibres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "idEmisor" varchar, "idReceptor" varchar, "idSala" varchar, "estado" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "salas"[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "salas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apikey" varchar, "sessionID" text, "token" text, "minutos" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "estado" varchar)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "nombre" varchar, "tipo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "estado" varchar, "apellido" varchar)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190331185827)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190321233314),
+(20190319220154),
+(20190331152353),
+(20190311224601);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-19 23:06:01.710611"], ["updated_at", "2019-04-19 23:06:01.710611"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "llamadaslibres"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "llamadaslibres" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "idEmisor" varchar, "idReceptor" varchar, "idSala" varchar, "estado" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "salas"[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "salas" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar, "apikey" varchar, "sessionID" text, "token" text, "minutos" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "estado" varchar)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "nombre" varchar, "tipo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "estado" varchar, "apellido" varchar)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/schema.rb:35
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190331185827)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190321233314),
+(20190319220154),
+(20190331152353),
+(20190311224601);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-19 23:06:01.769077"], ["updated_at", "2019-04-19 23:06:01.769077"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-04-19 23:06:01.772788"], ["key", "environment"]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "tipo", "created_at", "updated_at", "estado", "apellido") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$Z/gBSmXS.J0QFEUllIqpxe.jjT9XtIFB06n8ufyns585bsUC1BIYy"], ["nombre", "Admin"], ["tipo", "admin"], ["created_at", "2019-04-19 23:06:01.920529"], ["updated_at", "2019-04-19 23:06:01.920529"], ["estado", "activo"], ["apellido", ""]]
+  ↳ db/seeds.rb:17
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luis@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "tipo", "created_at", "updated_at", "estado", "apellido") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "luis@gmail.com"], ["encrypted_password", "$2a$11$l5UtTkZYMGVhzCmMoab4JeV/KzhEbNQxkRyteT3PLeASK.zKoK48O"], ["nombre", "Luis"], ["tipo", "admin"], ["created_at", "2019-04-19 23:06:02.054863"], ["updated_at", "2019-04-19 23:06:02.054863"], ["estado", "activo"], ["apellido", "Veizaga"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "andres@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:38
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "tipo", "created_at", "updated_at", "estado", "apellido") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "andres@gmail.com"], ["encrypted_password", "$2a$11$Nq98N.nEoTeKLPehuTm.YOqcsT4zY3hpRruVS0/sfqZNe710grpaK"], ["nombre", "Julio Andres"], ["tipo", "normal"], ["created_at", "2019-04-19 23:06:02.182035"], ["updated_at", "2019-04-19 23:06:02.182035"], ["estado", "activo"], ["apellido", "Rodrigez Balcazar"]]
+  ↳ db/seeds.rb:38
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "salvador@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:48
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "tipo", "created_at", "updated_at", "estado", "apellido") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "salvador@gmail.com"], ["encrypted_password", "$2a$11$GsEVcepDCKqOmg3pZJ9jGO2Sebzw52j1B3AN6LzFgHSqDQVKmyJSi"], ["nombre", "Salvador Rodolfo"], ["tipo", "normal"], ["created_at", "2019-04-19 23:06:02.307947"], ["updated_at", "2019-04-19 23:06:02.307947"], ["estado", "activo"], ["apellido", "Guitierres Salasar"]]
+  ↳ db/seeds.rb:48
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:48
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "juan@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:58
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "nombre", "tipo", "created_at", "updated_at", "estado", "apellido") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "juan@gmail.com"], ["encrypted_password", "$2a$11$u1NEv2SW2MyGww5ve.Mcx.BcFzGYdFSmCkAPUwh5R5VF4Ammy.Y4e"], ["nombre", "Juan Diego"], ["tipo", "normal"], ["created_at", "2019-04-19 23:06:02.433941"], ["updated_at", "2019-04-19 23:06:02.433941"], ["estado", "activo"], ["apellido", "Leaño Perez"]]
+  ↳ db/seeds.rb:58
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:58
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:68
+  [1m[36mSala Create (0.9ms)[0m  [1m[32mINSERT INTO "salas" ("nombre", "apikey", "sessionID", "token", "minutos", "created_at", "updated_at", "estado") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "sala 1"], ["apikey", "46271902"], ["sessionID", "2_MX40NjI3MTkwMn5-MTU1NDA0NzE3NDI1MX5ZdmFVQXFEdTVRZUFHUDBWa1g4Y25yY0J-fg"], ["token", "T1==cGFydG5lcl9pZD00NjI3MTkwMiZzaWc9ZGViNDhhMWJlNzUzNjlhMmM0ZTc4MzU2YTI1ZGRjNjNhMzRhYjQzYjpzZXNzaW9uX2lkPTJfTVg0ME5qSTNNVGt3TW41LU1UVTFOREEwTnpFM05ESTFNWDVaZG1GVlFYRkVkVFZSWlVGSFVEQldhMWc0WTI1eVkwSi1mZyZjcmVhdGVfdGltZT0xNTU0MDQ3MjA1Jm5vbmNlPTAuMTU2MjY2MjEzMDMzMTA0NzMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1NjYzOTIwNCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="], ["minutos", 1800], ["created_at", "2019-04-19 23:06:02.468188"], ["updated_at", "2019-04-19 23:06:02.468188"], ["estado", "libre"]]
+  ↳ db/seeds.rb:68
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:68
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:78
+  [1m[36mSala Create (0.3ms)[0m  [1m[32mINSERT INTO "salas" ("nombre", "apikey", "sessionID", "token", "minutos", "created_at", "updated_at", "estado") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "sala 2"], ["apikey", "46271902"], ["sessionID", "2_MX40NjI3MTkwMn5-MTU1NDA0NzMyNTc2MH4wSks5M3dzclgwYlZTQ3Z1cHdZWFVIUGV-fg"], ["token", "T1==cGFydG5lcl9pZD00NjI3MTkwMiZzaWc9MmNhZDgyODAwOTI0MTg5MjQ3NTE3MDM1NWIzNmE3ZmE5Mjg0YjcyMDpzZXNzaW9uX2lkPTJfTVg0ME5qSTNNVGt3TW41LU1UVTFOREEwTnpNeU5UYzJNSDR3U2tzNU0zZHpjbGd3WWxaVFEzWjFjSGRaV0ZWSVVHVi1mZyZjcmVhdGVfdGltZT0xNTU0MDQ3MzM0Jm5vbmNlPTAuMzkzNTcwMjM1MjAzNDgwNDUmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1NjYzOTMzNCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="], ["minutos", 1800], ["created_at", "2019-04-19 23:06:02.473472"], ["updated_at", "2019-04-19 23:06:02.473472"], ["estado", "libre"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:88
+  [1m[36mSala Create (0.3ms)[0m  [1m[32mINSERT INTO "salas" ("nombre", "apikey", "sessionID", "token", "minutos", "created_at", "updated_at", "estado") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nombre", "sala 3"], ["apikey", "46271902"], ["sessionID", "2_MX40NjI3MTkwMn5-MTU1NDA0NzM4OTkwOX50RiswU3ppSCtTaEsrR2lHWUltNXZ0T2J-fg"], ["token", "T1==cGFydG5lcl9pZD00NjI3MTkwMiZzaWc9MWYxYjYwOGVhODA4MTAxMWM0OTk1ZjBkZTUxYThhZTIzZTE3MDU1MzpzZXNzaW9uX2lkPTJfTVg0ME5qSTNNVGt3TW41LU1UVTFOREEwTnpNNE9Ua3dPWDUwUmlzd1UzcHBTQ3RUYUVzclIybEhXVWx0TlhaMFQySi1mZyZjcmVhdGVfdGltZT0xNTU0MDQ3Mzk3Jm5vbmNlPTAuMzAyMzMxMDcxNjY2MzAyMzUmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1NjYzOTM5NiZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="], ["minutos", 1800], ["created_at", "2019-04-19 23:06:02.479788"], ["updated_at", "2019-04-19 23:06:02.479788"], ["estado", "libre"]]
+  ↳ db/seeds.rb:88
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:88
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:23:44 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 259ms (Views: 224.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:25:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:28:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:28:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+updated+" for ::1 at 2019-04-19 19:28:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:29:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:21 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:23 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+updated+" for ::1 at 2019-04-19 19:29:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:29:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:41 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:29:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:30:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:30:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:02 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:04 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:05 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:30:12 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:14 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+" for ::1 at 2019-04-19 19:30:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated "}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+luis" for ::1 at 2019-04-19 19:30:49 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated luis"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=updated+luis" for ::1 at 2019-04-19 19:30:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"updated luis"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=luis%40gmail.com" for ::1 at 2019-04-19 19:30:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"luis@gmail.com"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in?q=luis%40gmail.com" for ::1 at 2019-04-19 19:33:36 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"luis@gmail.com"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+...r(resource, as: resource_name,, namespace: 'theForm' , url: ...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+...e_name,, namespace: 'theForm' , url: session_path(resource_n...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+...l: session_path(resource_name)) do |f| @output_buffer.safe_a...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in?q=luis%40gmail.com" for ::1 at 2019-04-19 19:33:38 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"luis@gmail.com"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+...r(resource, as: resource_name,, namespace: 'theForm' , url: ...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+...e_name,, namespace: 'theForm' , url: session_path(resource_n...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+...l: session_path(resource_name)) do |f| @output_buffer.safe_a...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in?q=luis%40gmail.com" for ::1 at 2019-04-19 19:33:39 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"luis@gmail.com"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+...r(resource, as: resource_name,, namespace: 'theForm' , url: ...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+...e_name,, namespace: 'theForm' , url: session_path(resource_n...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+...l: session_path(resource_name)) do |f| @output_buffer.safe_a...
+...                              ^
+/Users/apple/Documents/herokucadeco/app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting ')'
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ',', expecting end
+app/views/devise/sessions/new.html.erb:14: syntax error, unexpected ')', expecting end
+app/views/devise/sessions/new.html.erb:39: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/users/sign_in?q=luis%40gmail.com" for ::1 at 2019-04-19 19:33:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"q"=>"luis@gmail.com"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzxpWtH9KOOb7VnRaxNP9d3zdMwX5YAx9p7UoaO8uAt3mRG5klNBBO4UORTchZGpjhrWx0VsKxn40OZSsr7xWw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BzxpWtH9KOOb7VnRaxNP9d3zdMwX5YAx9p7UoaO8uAt3mRG5klNBBO4UORTchZGpjhrWx0VsKxn40OZSsr7xWw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc30Awvy+SbK4VzSMoimc+lBJ7Pfac4LyD0cYsFRQ5EBaIzgSFyQwb8YPBeFHngvuqiFuI3gZSPGcy6R0FMKwQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cc30Awvy+SbK4VzSMoimc+lBJ7Pfac4LyD0cYsFRQ5EBaIzgSFyQwb8YPBeFHngvuqiFuI3gZSPGcy6R0FMKwQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:48 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"66TumUBAXlYkpDbm/lD5W/N2/cwEwsfktaz2GMTIgAibAZZ6A+43sVFdViNJxicHoJ9fx1ZLbMy74sTr1crJWA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"66TumUBAXlYkpDbm/lD5W/N2/cwEwsfktaz2GMTIgAibAZZ6A+43sVFdViNJxicHoJ9fx1ZLbMy74sTr1crJWA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:48 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Nj7NM2Ih4TBnEyLdRCMRql7BwowY7RSJRtqN+deG22kfYPXjibuY7RlLE7ChlIa+pKlAWLqH3orVVjE9lxSPQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Nj7NM2Ih4TBnEyLdRCMRql7BwowY7RSJRtqN+deG22kfYPXjibuY7RlLE7ChlIa+pKlAWLqH3orVVjE9lxSPQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:49 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFB1Vjc26BFA5JsljDsSjCIuJRqK4hHs1bkW79ZDCdj49Q21dJiB9jUd++A7rczQcceHEdhrusTb9yQcx0FAiA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"a", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iFB1Vjc26BFA5JsljDsSjCIuJRqK4hHs1bkW79ZDCdj49Q21dJiB9jUd++A7rczQcceHEdhrusTb9yQcx0FAiA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"a", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:50 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9iZCbdBpDnrNQ4g+TAZuPnQRUzzSDd613PKtNLMGSJ6GgzqOk8dnnbi66Pv7kLBiJ/jxN4CEdZ3SvJ/HogQBzg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9iZCbdBpDnrNQ4g+TAZuPnQRUzzSDd613PKtNLMGSJ6GgzqOk8dnnbi66Pv7kLBiJ/jxN4CEdZ3SvJ/HogQBzg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:51 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"objj5tioP5f+KEYqNikOi6yM/plYbU0CmkdLZYljOnnRHZsFmwZWcIvRJu+Bv9DX/2Vckgrk5iqUCXmWmGFzKQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"asdasd", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"objj5tioP5f+KEYqNikOi6yM/plYbU0CmkdLZYljOnnRHZsFmwZWcIvRJu+Bv9DX/2Vckgrk5iqUCXmWmGFzKQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"asdasd", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:54 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o7sVh8ACm9/aorLidQvy6qLNSMFbqhllROZbIJ+iLqjTHm1kg6zyOK9b0ifCnSy28STqygkjsk1KqGnTjqBn+A==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"asdaskdmajksn d", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o7sVh8ACm9/aorLidQvy6qLNSMFbqhllROZbIJ+iLqjTHm1kg6zyOK9b0ifCnSy28STqygkjsk1KqGnTjqBn+A==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"asdaskdmajksn d", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:54 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FNVswAKGQ0/eJXPAwyEQMW4QIoCZB3MwkBlY2QpD6fRkcBQjQSgqqKvcEwV0t85tPfmAi8uO2BieV2oqG0GgpA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FNVswAKGQ0/eJXPAwyEQMW4QIoCZB3MwkBlY2QpD6fRkcBQjQSgqqKvcEwV0t85tPfmAi8uO2BieV2oqG0GgpA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rqx3CrCabRXSi8Ld/HH2CVoeq9JjfDhtyfZJG85bpiiH8k/aWwAUyKzT87AZxmEdoHYpBsEW8m5aevXfjsnyA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0rqx3CrCabRXSi8Ld/HH2CVoeq9JjfDhtyfZJG85bpiiH8k/aWwAUyKzT87AZxmEdoHYpBsEW8m5aevXfjsnyA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zh3vf9hZolH4kgttHJkYmYwgQpEgiFTMzGxc4z6dpni+uJecm/fLto1ra6irD8bF38ngmnIB/+TCIm4QL5/vKA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zh3vf9hZolH4kgttHJkYmYwgQpEgiFTMzGxc4z6dpni+uJecm/fLto1ra6irD8bF38ngmnIB/+TCIm4QL5/vKA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:33:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gzvzkdREFLMXYEfb39Kcta9+VoGAj4AQll7uTdyPLjLznotyl+p9VGKZJx5oRELp/Jf0itIGKziYENy+zY1nYg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gzvzkdREFLMXYEfb39Kcta9+VoGAj4AQll7uTdyPLjLznotyl+p9VGKZJx5oRELp/Jf0itIGKziYENy+zY1nYg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 72ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:34:01 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"POoTNl7K+vOwJpOsAI8RRupCDGMgeLqAMpvdWzKBDKJMT2vVHWSTFMXf82m3Gc8auauuaHLxEag81e+oI4NF8g==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"luis", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"POoTNl7K+vOwJpOsAI8RRupCDGMgeLqAMpvdWzKBDKJMT2vVHWSTFMXf82m3Gc8auauuaHLxEag81e+oI4NF8g==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"luis", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:35:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:35:25 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6cp1asV04IDBnUWfsudjXaK0YPcVHjbrsnk7hs7eABWZbw2JhtqJZ7RkJVoFcb0B8V3C/EeXncO8Nwl139xJRQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6cp1asV04IDBnUWfsudjXaK0YPcVHjbrsnk7hs7eABWZbw2JhtqJZ7RkJVoFcb0B8V3C/EeXncO8Nwl139xJRQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uGX100T2K6aSCwJWRZwGy7dZFx9W7lyekrHD6g9WnGKRO80Dr2xSe+xTMzugK5HfTTGVy/SElp0BPX8uT8TIQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+uGX100T2K6aSCwJWRZwGy7dZFx9W7lyekrHD6g9WnGKRO80Dr2xSe+xTMzugK5HfTTGVy/SElp0BPX8uT8TIQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8BToLLY3I9RkkaZkNhcJDbqOznItZmgElOw98W5tTj3ZStD8Xa1aCRrJlwnToJ4ZQOZMpo8MogcHYIE1Lv8aA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8BToLLY3I9RkkaZkNhcJDbqOznItZmgElOw98W5tTj3ZStD8Xa1aCRrJlwnToJ4ZQOZMpo8MogcHYIE1Lv8aA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:31 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tNT5AApY+4lScdQl4VztP8HbVuLi83fcwm7swp2/d1DEcYHjSfaSbieItOBWyjNjkjL06bB63PTMIN4xjL0+AA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tNT5AApY+4lScdQl4VztP8HbVuLi83fcwm7swp2/d1DEcYHjSfaSbieItOBWyjNjkjL06bB63PTMIN4xjL0+AA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:31 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lzisLAyipjgXJYXC19hNI85for41ql9ZMbImzw8jKCPnndTPTwzP32Lc5QdgTpN/nbYAtWcj9HE//BQ8HiFhcw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lzisLAyipjgXJYXC19hNI85for41ql9ZMbImzw8jKCPnndTPTwzP32Lc5QdgTpN/nbYAtWcj9HE//BQ8HiFhcw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:31 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZflTKbgZj9mIgNZ7WIrPDojEBGbKcUpRcFmy3voVxBAVXCvK+7fmPv15tr7vHBFS2y2mbZj44Xl+F4At6xeNQA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZflTKbgZj9mIgNZ7WIrPDojEBGbKcUpRcFmy3voVxBAVXCvK+7fmPv15tr7vHBFS2y2mbZj44Xl+F4At6xeNQA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RzkFpDt4CwYzNTiLRtX75xd5pZKM+2YPKvJ54d0jOWM3nH1HeNZi4UbMWE7xQyW7RJAHmd5yzSckvEsSzCFwMw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RzkFpDt4CwYzNTiLRtX75xd5pZKM+2YPKvJ54d0jOWM3nH1HeNZi4UbMWE7xQyW7RJAHmd5yzSckvEsSzCFwMw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ChvSCWikL8v6Qiezm6A7wl9CQaVjngtRge7UJBZUv+UjRerZgz5WFoQaFt5+F6zWpSrDccH0wVISYmjgVsbrw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5ChvSCWikL8v6Qiezm6A7wl9CQaVjngtRge7UJBZUv+UjRerZgz5WFoQaFt5+F6zWpSrDccH0wVISYmjgVsbrw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tcN8WoqjtmH4Xw4PwFEkdxZCO2d6WNOOjNRH4BSyY7S6apXmzOZA8nEKYlyFnMIrbp3E0LXawtlAYSc9mus5DQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tcN8WoqjtmH4Xw4PwFEkdxZCO2d6WNOOjNRH4BSyY7S6apXmzOZA8nEKYlyFnMIrbp3E0LXawtlAYSc9mus5DQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iu3G9MHOKur3ZQHuL9+06QzTqnOQ24hGrXiIX9+zA9dSSL4XgmBDDYKcYSuYSWq1XzoIeMJSI26jNrqszrFKhw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Iu3G9MHOKur3ZQHuL9+06QzTqnOQ24hGrXiIX9+zA9dSSL4XgmBDDYKcYSuYSWq1XzoIeMJSI26jNrqszrFKhw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:32 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PxprjpB1+cU33x4zjgKmd+BsM6Ko2T8lMVj06On+3rxPvxNt09uQIkImfvY5lHgrs4WRqfpQlA0/FsYb+PyX7A==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PxprjpB1+cU33x4zjgKmd+BsM6Ko2T8lMVj06On+3rxPvxNt09uQIkImfvY5lHgrs4WRqfpQlA0/FsYb+PyX7A==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ULM6LT37UZM7yfKZkLtD7BqCihp6XJBqPL6vqVde+a0gFkLOflU4dE4wklwnLZ2wSWsoESjVO0Iy8J1aRlyw/Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ULM6LT37UZM7yfKZkLtD7BqCihp6XJBqPL6vqVde+a0gFkLOflU4dE4wklwnLZ2wSWsoESjVO0Iy8J1aRlyw/Q==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c+zjbFChCKUXUvzHh2XcrhkpvozNNofs0RqellKi7FYDSZuPEw9hQmKrnAIw8wLySsAch5+/LMTfVKxlQ6ClBg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c+zjbFChCKUXUvzHh2XcrhkpvozNNofs0RqellKi7FYDSZuPEw9hQmKrnAIw8wLySsAch5+/LMTfVKxlQ6ClBg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XxfLECGLfJuGlE7UMzYilk2DsEU83CpKSKfZaJEbp6l2SfPAyhEFRvjMf7nWgbWCt+sykZ624EnbK2Ws0Ynzg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1XxfLECGLfJuGlE7UMzYilk2DsEU83CpKSKfZaJEbp6l2SfPAyhEFRvjMf7nWgbWCt+sykZ624EnbK2Ws0Ynzg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mUgKtN2aUHvVr/tcdSAsI1iZIpiyulxa4mWla7fHuzLp7XJXnjQ5nKBWm5nCtvJ/C3CAk+Az93LsK5eYpsXyYg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mUgKtN2aUHvVr/tcdSAsI1iZIpiyulxa4mWla7fHuzLp7XJXnjQ5nKBWm5nCtvJ/C3CAk+Az93LsK5eYpsXyYg==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JUauHDLquTeKBADM13HLQEkcpNFKPdhBj+oFIBS4n2NV49b/cUTQ0P/9YAlg5xUcGvUG2hi0c2mBpDfTBbrWMw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JUauHDLquTeKBADM13HLQEkcpNFKPdhBj+oFIBS4n2NV49b/cUTQ0P/9YAlg5xUcGvUG2hi0c2mBpDfTBbrWMw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:35:35 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IWdsJiS4w+mn8iSDchj23BfWco2xSw1Oum519h1uw7tRwhTFZxaqDtILREbFjiiARD/QhuPCpma0IEcFDGyK6w==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IWdsJiS4w+mn8iSDchj23BfWco2xSw1Oum519h1uw7tRwhTFZxaqDtILREbFjiiARD/QhuPCpma0IEcFDGyK6w==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"@gmail.com", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:36:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:36:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nWt8gNOVozGQFkrbhl//OuXT8GSfHqRhDv63U+k15mjtzgRjkDvK1uXvKh4xySFmtjpSb82XD0kAsIWg+DevOA==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:36:55 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:37:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/users/logout" for ::1 at 2019-04-19 19:37:03 -0400
+Processing by UsersController#logout as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "estado" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["estado", "inactivo"], ["updated_at", "2019-04-19 23:37:03.866443"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+Redirected to http://localhost:3000/users/sign_out
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2019-04-19 19:37:03 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:37:03 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:37:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:37:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+d4p9rf8qU48LB5ckkaTm9sxzkyWd7ohx0g1ywXIeJsohyYIDTQv2HJjd38U45vATrdSwzPvPTjLw/a0VHqtyw==", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+d4p9rf8qU48LB5ckkaTm9sxzkyWd7ohx0g1ywXIeJsohyYIDTQv2HJjd38U45vATrdSwzPvPTjLw/a0VHqtyw==", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:37:11 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFrIOh7kjR4arncLdp21Vo0rypkAPNhhzaFKxdc9tzm5A8fEpCwLiFThHijwOL0NGK1WFqWkX3jBKom6ho9iaQ==", "user"=>{"email"=>"example@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aFrIOh7kjR4arncLdp21Vo0rypkAPNhhzaFKxdc9tzm5A8fEpCwLiFThHijwOL0NGK1WFqWkX3jBKom6ho9iaQ==", "user"=>{"email"=>"example@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:37:24 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IhVC1YdRZCx1LrLrPYGvM5646uuHxfXonBRhcbijOY7zTE0rPZniujth28i7JKdoCz52ZCJdcvGQn6IO6RHs3g==", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "example@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IhVC1YdRZCx1LrLrPYGvM5646uuHxfXonBRhcbijOY7zTE0rPZniujth28i7JKdoCz52ZCJdcvGQn6IO6RHs3g==", "user"=>{"email"=>"example@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 163ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:40:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:40:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:40:54 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0ZjZPwuMM6jN4QxEfgi8i0Mk8egLWJHbfh9iJaSDzGWH2yaRua2WO147RKXXSqpuIoPSAW15V5hc773xyDaYQ==", "user"=>{"email"=>"askdmlkas@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R0ZjZPwuMM6jN4QxEfgi8i0Mk8egLWJHbfh9iJaSDzGWH2yaRua2WO147RKXXSqpuIoPSAW15V5hc773xyDaYQ==", "user"=>{"email"=>"askdmlkas@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:40:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xHUwrSYdiaoG85YnOmVuikYfizsXNY7GrRubRRbcvq8VLD9TnNUPPEi8/wS8wGbR05kXtLKtCd+hkFg6R25r/w==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xHUwrSYdiaoG85YnOmVuikYfizsXNY7GrRubRRbcvq8VLD9TnNUPPEi8/wS8wGbR05kXtLKtCd+hkFg6R25r/w==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:40:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtRM3hFMvrzAh5huyk3+wwJ2HaUI49Gj5W2F2X89Le/LjUMgq4Q4Ko7I8U1M6PaYl/CBKq17Vrrp5kamLo/4vw==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GtRM3hFMvrzAh5huyk3+wwJ2HaUI49Gj5W2F2X89Le/LjUMgq4Q4Ko7I8U1M6PaYl/CBKq17Vrrp5kamLo/4vw==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:40:55 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Roa9xwfjjJ/BP1jjBge6pXt0c80blMBF3la2jUnZJZiX37I5vSsKCY9wMcCAorL+7vLvQr4MR1zS3XXyGGvwyA==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Roa9xwfjjJ/BP1jjBge6pXt0c80blMBF3la2jUnZJZiX37I5vSsKCY9wMcCAorL+7vLvQr4MR1zS3XXyGGvwyA==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:40:56 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuXxY+yTe/ezOOqxWByiSXLJg2JsQpZDgOUarpxvwaKvvP6dVlv9Yf13g5LeuaoS508f7cnaEVqMbtnRzd0U8g==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fuXxY+yTe/ezOOqxWByiSXLJg2JsQpZDgOUarpxvwaKvvP6dVlv9Yf13g5LeuaoS508f7cnaEVqMbtnRzd0U8g==", "user"=>{"email"=>"askdmlkas@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:41:54 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:41:55 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:41:55 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:41:59 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oZkOEV0AFmkGfwHZy5x6lU8zOL0WMAa7cAHH2fDLHT1wwAHv58iQ/0gwaPpNOXLO2rWkMrOogaJ8igSmoXnIbQ==", "user"=>{"email"=>"lalskmd@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lalskmd@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oZkOEV0AFmkGfwHZy5x6lU8zOL0WMAa7cAHH2fDLHT1wwAHv58iQ/0gwaPpNOXLO2rWkMrOogaJ8igSmoXnIbQ==", "user"=>{"email"=>"lalskmd@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 134ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:42:24 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:42:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QLBoQ2g0m+uV6cs1ULoKzI07EMTOOQ4sHSeClQBtHHGR6We90vwdfdumohbWHwKXGL2MS2uhiTURrEHqUd/JIQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QLBoQ2g0m+uV6cs1ULoKzI07EMTOOQ4sHSeClQBtHHGR6We90vwdfdumohbWHwKXGL2MS2uhiTURrEHqUd/JIQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:42:44 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ry3krzWC8c2UDNb2cuR1edh7tIp9CgBP1VN39z9niNx+dOtRj0p3W9pDv9X0QX0iTf0oBdiSh1bZ2LSIbtVdjA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ry3krzWC8c2UDNb2cuR1edh7tIp9CgBP1VN39z9niNx+dOtRj0p3W9pDv9X0QX0iTf0oBdiSh1bZ2LSIbtVdjA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:42:50 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzwNCkDacSVAxOOavSzyeOOlQaaGNX/3FXqnJAxqbijqZQL0+hL3sw6Lirk7ifojdiPdKSOt+O4Z8WRbXdi7eA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OzwNCkDacSVAxOOavSzyeOOlQaaGNX/3FXqnJAxqbijqZQL0+hL3sw6Lirk7ifojdiPdKSOt+O4Z8WRbXdi7eA==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:43:02 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"49yFheR6o8Su+mPGMdbHbV7H5nMLgFnsXgkPa86mbqIyhYp7XrIlUuC1CuW3c882y0F6/K4Y3vVSgswUnxS78g==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"49yFheR6o8Su+mPGMdbHbV7H5nMLgFnsXgkPa86mbqIyhYp7XrIlUuC1CuW3c882y0F6/K4Y3vVSgswUnxS78g==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:44:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:44:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:44:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:44:19 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QK0QOiJS8J+XNOj0eN10QZQlr4qmBwVYPF2HLR2rQFWR9B/EmJp2Cdl7gdf+eHwaAaMzBQOfgkEw1kRSTBmVBQ==", "user"=>{"email"=>"aklsm@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aklsm@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QK0QOiJS8J+XNOj0eN10QZQlr4qmBwVYPF2HLR2rQFWR9B/EmJp2Cdl7gdf+eHwaAaMzBQOfgkEw1kRSTBmVBQ==", "user"=>{"email"=>"aklsm@gmail.com", "password"=>"[FILTERED]"}, "q"=>"", "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 135ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:45:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:45:50 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dpz5w02myjVPQB8HMKYYUkxtPEk+aqDD5ROiqJ7ywGDfxfY9925MowEPdiS2AxAJ2eugxpvyJ9rpmGHXz0AVMA==", "user"=>{"email"=>"lkasmd", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lkasmd"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dpz5w02myjVPQB8HMKYYUkxtPEk+aqDD5ROiqJ7ywGDfxfY9925MowEPdiS2AxAJ2eugxpvyJ9rpmGHXz0AVMA==", "user"=>{"email"=>"lkasmd", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 141ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:00 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3A+M1Zq+w06BKM7KUyAFRX5SmQ8DODDTdJPeeXqPWRSKTHN7KJ9m3RLyhiv6YhOgH/W65mUZ9pBWYwGtFjoNA==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3A+M1Zq+w06BKM7KUyAFRX5SmQ8DODDTdJPeeXqPWRSKTHN7KJ9m3RLyhiv6YhOgH/W65mUZ9pBWYwGtFjoNA==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 136ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyF51G7WNoxNLfluP7Hasglndjk/KMk6jBCG/JizzFsSeHYq1B6wGgNikE25FNLpnOHqtpqwTiOAm0WDyQEZCw==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wyF51G7WNoxNLfluP7Hasglndjk/KMk6jBCG/JizzFsSeHYq1B6wGgNikE25FNLpnOHqtpqwTiOAm0WDyQEZCw==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 137ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:35 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BNECKRg/Y5SKH0P5yifoW40QNU9YFR4XsioDe1vOtEtSkv2Hqh7GBxnFCxhjZf6+7LcWpj402FSQ2tyvN3vgQ==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BNECKRg/Y5SKH0P5yifoW40QNU9YFR4XsioDe1vOtEtSkv2Hqh7GBxnFCxhjZf6+7LcWpj402FSQ2tyvN3vgQ==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IEgl9fHAkbBbpo/SCqNe8iDw6DL5BySujXAXHW6Tyv7xESoLSwgXJhXp5vGMBlaptXZ0vVyfo7eB+9RiPyEfrg==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IEgl9fHAkbBbpo/SCqNe8iDw6DL5BySujXAXHW6Tyv7xESoLSwgXJhXp5vGMBlaptXZ0vVyfo7eB+9RiPyEfrg==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7pk/kh1ULVgr/Zb/Cfa+47qAp6vqMWTuQfMkaqzGQAQ/wDBsp5yrzmWy/9yPU7a4LwY7JE+p4/dNeOcV/XSVVA==", "user"=>{"email"=>"luis@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7pk/kh1ULVgr/Zb/Cfa+47qAp6vqMWTuQfMkaqzGQAQ/wDBsp5yrzmWy/9yPU7a4LwY7JE+p4/dNeOcV/XSVVA==", "user"=>{"email"=>"luis@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mcOR+GV7UarFx3Q4r6gGRJWCP78NOEQqfdpvlENGQCFImp4G37PXPIuIHRspDQ4fAASjMKigwzNxUazrEvSVcQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mcOR+GV7UarFx3Q4r6gGRJWCP78NOEQqfdpvlENGQCFImp4G37PXPIuIHRspDQ4fAASjMKigwzNxUazrEvSVcQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC2pglZ+zxFZsHqy/ksNkQ7kUsyz4LQIc5OYTjbt2ubNdKZ87LZJhxf/E5F47gXKm2LOQxZ4MxF/GFsxZ18Ptg==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HC2pglZ+zxFZsHqy/ksNkQ7kUsyz4LQIc5OYTjbt2ubNdKZ87LZJhxf/E5F47gXKm2LOQxZ4MxF/GFsxZ18Ptg==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 54ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ay7nYqW9f7pTMXOmQMXJmxDTEZcjJqCRIUYbxp+wFYC6d+icH3X5LB1+GoXGYMHAhVWNGIa+J4gtzdi5zgLA0A==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ay7nYqW9f7pTMXOmQMXJmxDTEZcjJqCRIUYbxp+wFYC6d+icH3X5LB1+GoXGYMHAhVWNGIa+J4gtzdi5zgLA0A==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UuU0y/R8bnV4LdAxIKWH8nWybzdYbuRvYkgx/OZxTzGDvDs1TrTo4zZiuRKmAI+p4DTzuP32Y3Zuw/KDt8OaYQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UuU0y/R8bnV4LdAxIKWH8nWybzdYbuRvYkgx/OZxTzGDvDs1TrTo4zZiuRKmAI+p4DTzuP32Y3Zuw/KDt8OaYQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlrseJrx6wkbXegu84AGx45PscSIv7LbKCwpXOcDlm1XA+OGIDltn1USgQ11JQ6cG8ktSy0nNcIkp+ojtrFDPQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hlrseJrx6wkbXegu84AGx45PscSIv7LbKCwpXOcDlm1XA+OGIDltn1USgQ11JQ6cG8ktSy0nNcIkp+ojtrFDPQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B2QsBAUCHq5DILWjna1qhxLWNFWuSemZjJ+WAZLdEYvWPSP6v8qYOA1v3IAbCGLch1Co2gvRboCAFFV+w2/E2w==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B2QsBAUCHq5DILWjna1qhxLWNFWuSemZjJ+WAZLdEYvWPSP6v8qYOA1v3IAbCGLch1Co2gvRboCAFFV+w2/E2w==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4HP73kxRBn913MzgcThtNm0t9H5/Z/cfM80gbrKh8fG2MARw/nCj7OYGhAHYenvTDIrXlxlGMVwRPf+63hSlw==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4HP73kxRBn913MzgcThtNm0t9H5/Z/cfM80gbrKh8fG2MARw/nCj7OYGhAHYenvTDIrXlxlGMVwRPf+63hSlw==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2HYwiz5/70CW9p4CmQCwrhvktZXgOYl99uOmxkWkUx0JLz91hLdp1ti59yEfpbj1jmIpGkWhDmT6aGW5FBaGTQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2HYwiz5/70CW9p4CmQCwrhvktZXgOYl99uOmxkWkUx0JLz91hLdp1ti59yEfpbj1jmIpGkWhDmT6aGW5FBaGTQ==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RsbLRfZVvO3wIc/mT1iYYyxSV21huIVvgC+X2huOtcqXn8S7TJ06e75upsXJ/ZA4udTL4sQgAnaMpFSlSjxgmg==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RsbLRfZVvO3wIc/mT1iYYyxSV21huIVvgC+X2huOtcqXn8S7TJ06e75upsXJ/ZA4udTL4sQgAnaMpFSlSjxgmg==", "user"=>{"email"=>"luis@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:46:43 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:46:48 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IjhjoQbLksVDaSetaOMgcbUun8mHjMx+h2Ht/2JmESbzYWxfvAMUUw0mTo7uRigqIKgDRiIUS2eL6i6AM9TEdg==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:46:48 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "estado" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["estado", "activo"], ["updated_at", "2019-04-19 23:46:48.639943"], ["id", 2]]
+  ↳ app/views/home/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/logout" for ::1 at 2019-04-19 19:46:51 -0400
+Processing by UsersController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "estado" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["estado", "inactivo"], ["updated_at", "2019-04-19 23:46:51.945104"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+Redirected to http://localhost:3000/users/sign_out
+Completed 302 Found in 10ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2019-04-19 19:46:51 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:46:51 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:46:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:48:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:48:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:48:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:48:47 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:48:51 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rq2d9daN0Bb4pcQNgG76rLfn4AWxqFu0gyNyBUolb3i9CaoIjYSDZ4RBwOOdOwcC/UPKRkh+jXc43NoVV0PlDQ==", "user"=>{"email"=>"luiss", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luiss"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rq2d9daN0Bb4pcQNgG76rLfn4AWxqFu0gyNyBUolb3i9CaoIjYSDZ4RBwOOdOwcC/UPKRkh+jXc43NoVV0PlDQ==", "user"=>{"email"=>"luiss", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 138ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:48:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cM1IwUfFwjtPVr79l1MRDHDFgYFo6jH2qMvoNdyL7nxjaX88HMyRSjOyuhOKBuyiOmGrwpE85zUTNEAlwe1kCQ==", "user"=>{"email"=>"luiss", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cM1IwUfFwjtPVr79l1MRDHDFgYFo6jH2qMvoNdyL7nxjaX88HMyRSjOyuhOKBuyiOmGrwpE85zUTNEAlwe1kCQ==", "user"=>{"email"=>"luiss", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:49:01 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n759FGmBt5k1495WWtN9uncjkUCsx4BOSd+Tkwyl8ruMGkrpMojk6EkH2rhHhoAUPYe7A1URVo3yIDuDEcN4zg==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n759FGmBt5k1495WWtN9uncjkUCsx4BOSd+Tkwyl8ruMGkrpMojk6EkH2rhHhoAUPYe7A1URVo3yIDuDEcN4zg==", "user"=>{"email"=>"luis", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 138ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:49:08 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:49:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yxp5W9+kO5tVP6n0jfI04zRu/Zy93nB5kZXCxDxBzd5wvk6mhK1o6inbrRqQp8lNfsrX30QIproqamrUISdHqw==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 121ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yxp5W9+kO5tVP6n0jfI04zRu/Zy93nB5kZXCxDxBzd5wvk6mhK1o6inbrRqQp8lNfsrX30QIproqamrUISdHqw==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 134ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:28 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:50:31 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:50:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:54:01 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:54:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:54:04 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGJjh4eeNdv6SdBToM0hK+1HfhkcbpB7C6Op/GqAfw4XxlR63Jdmqoat1L29mNyFp+NUWuW4RriwXAHsd+b1ew==", "user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BGJjh4eeNdv6SdBToM0hK+1HfhkcbpB7C6Op/GqAfw4XxlR63Jdmqoat1L29mNyFp+NUWuW4RriwXAHsd+b1ew==", "user"=>{"email"=>"asd@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:54:14 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OAiSb4admd4iBXPVuk+xHa0GEqR6ogmwuTWFABoPTFwrrKWS3ZTKr17hdzunGkyz56I454N033MCyi0QB2nGKQ==", "user"=>{"email"=>"luis@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luis@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 125ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:54:14 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/home_controller.rb:3
+  Rendering home/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "estado" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["estado", "activo"], ["updated_at", "2019-04-19 23:54:14.203100"], ["id", 2]]
+  ↳ app/views/home/index.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/views/home/index.html.erb:5
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/logout" for ::1 at 2019-04-19 19:54:18 -0400
+Processing by UsersController#logout as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "estado" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["estado", "inactivo"], ["updated_at", "2019-04-19 23:54:18.481315"], ["id", 2]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8
+Redirected to http://localhost:3000/users/sign_out
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/sign_out" for ::1 at 2019-04-19 19:54:18 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-19 19:54:18 -0400
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-19 19:54:18 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:54:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guM2mIacsMEnc9xg5gFTUlVl9gIjdV6Lx3GR6ZlHK5dV6uj6K+KF04afcYx1Pz94FuGCkAQn96BzIjsLHzCzqQ==", "user"=>{"email"=>"asasdas@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guM2mIacsMEnc9xg5gFTUlVl9gIjdV6Lx3GR6ZlHK5dV6uj6K+KF04afcYx1Pz94FuGCkAQn96BzIjsLHzCzqQ==", "user"=>{"email"=>"asasdas@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:54:25 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pbye7et9NCPpZKIisU/Tr04A/bq6Xv2WrCxaeMF4LQ3qtUCPRgMBMUiID84icb+FDYSJKJ0MVL0Yf/CaRw+1Mw==", "user"=>{"email"=>"asdasd@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "asdasd@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/apple/.rbenv/versions/2.6.1/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pbye7et9NCPpZKIisU/Tr04A/bq6Xv2WrCxaeMF4LQ3qtUCPRgMBMUiID84icb+FDYSJKJ0MVL0Yf/CaRw+1Mw==", "user"=>{"email"=>"asdasd@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 139ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-19 19:54:58 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xs/K/Qckl4i4ZF69RQEZUcyA1fpYpjsBk47Vbxzl3UaJxhSfqlqimhmI81HWP3V7jwShaH/0kion3X+NmpJFeA==", "user"=>{"email"=>"sdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xs/K/Qckl4i4ZF69RQEZUcyA1fpYpjsBk47Vbxzl3UaJxhSfqlqimhmI81HWP3V7jwShaH/0kion3X+NmpJFeA==", "user"=>{"email"=>"sdf@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Ingresar"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
