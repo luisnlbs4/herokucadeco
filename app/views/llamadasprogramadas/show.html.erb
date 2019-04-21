@@ -1,0 +1,113 @@
+<% if current_user.email == @llamadasprogramada.user2 || current_user.email == @llamadasprogramada.user1 %>
+<div class="text-center">
+  <h2 id='clock' class='the-clock'></h2>
+</div>
+<hr>
+
+<script language="JavaScript">
+  let clock = document.getElementById('clock');
+  let time = setInterval(()=>{
+    startClock();
+  },1000);
+
+  function startClock(){
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    clock.innerText = hours + ':' + minutes + ':' + seconds;
+
+    if(hours < 10){
+      clock.innerText = '0' + hours + ':' + minutes + ':' + seconds;
+    }
+
+    else if(minutes < 10){
+      clock.innerText = hours + ':' + '0' + minutes + ':' + seconds;
+    }
+
+    else if(seconds < 10){
+       clock.innerText = hours + ':' + minutes + ':' + '0' + seconds;
+    }
+    if(<%= @llamadasprogramada.horafin.strftime("%H") %> == hours){
+      if(<%= @llamadasprogramada.horafin.strftime("%M") %> - 5 == minutes && seconds == 00){
+        alert("Su llamada ya acabara");
+        date = new Date();
+      }
+      if(<%= @llamadasprogramada.horafin.strftime("%M") %> == minutes){
+        window.location.href="/llamadasprogramadas"
+      }
+    }
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<% @sala = Sala.where("id = ?", @llamadasprogramada.idSala ).first %>
+<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    var apiKey =  "<%= @sala.apikey %>";
+    var sessionId = "<%= @sala.sessionID %>";
+    var token = "<%= @sala.token %>";
+
+    var session = TB.initSession(sessionId);
+    TB.setLogLevel(TB.DEBUG);
+    session.addEventListener('sessionConnected',sessionConnectedHandler);
+    session.addEventListener('streamCreated',streamCreatedHandler);
+
+
+
+
+
+    session.connect(apiKey,token);
+    function sessionConnectedHandler(event){
+      var publisherOptions = {
+        width: 500,
+        height: 400,
+     };
+        session.publish("myPublisher",publisherOptions);
+        for (var i = 0; i < event.streams.length; i++) {
+            if (session.connection.connectionId != event.streams[i].connection.connectionId) {
+                subscribeToStream(event.streams[i]);
+            }
+
+        }
+    }
+    function streamCreatedHandler(event){
+        for (var i = 0; i < event.streams.length; i++) {
+            if (session.connection.connectionId != event.streams[i].connection.connectionId) {
+                subscribeToStream(event.streams[i]);
+            }
+
+        }
+    }
+    function subscribeToStream(stream){
+      var subscriptor = {
+         width: 500,
+         height: 400,
+      };
+        var div = document.createElement('div');
+        div.setAttribute('id','stream-' + stream.streamId);
+        document.body.appendChild(div);
+        session.subscribe(stream, div.id,subscriptor);
+    }
+</script>
+  <div class="container" id="myPublisher"></div>
+
+<footer>
+  <a href="/llamadasprogramadas" class="btn btn-danger btn-block"><i class="fa fa-phone" aria-hidden="true"></i> Colgar</a>
+</footer>
+
+<%else%>
+  <meta http-equiv="refresh" content="0; url= /" />
+<%end%>

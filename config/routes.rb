@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :llamadasprogramadas
   resources :llamadaslibres
 
 

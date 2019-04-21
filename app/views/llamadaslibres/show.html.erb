@@ -5,12 +5,11 @@
 <script type="text/javascript">
   function myFunction() {
     <% if (Llamadaslibre.exists?(id: params[:id])) %>
-
     <% @llamada = Llamadaslibre.find(@llamadaslibre.id)%>
     <% if @llamada.estado == "conectado" %>
     <% @idSala = @llamada.idSala %>
-        refrescar("/salas/<%=  @idSala %>")
        <% @llamada.destroy %>
+       refrescar("/salas/<%=  @idSala %>")
     <% end %>
     <% if @llamada.estado == "rechazado" %>
      <% @sala =  Sala.find(@llamada.idSala)%>
