@@ -39,8 +39,6 @@ end
   def index
     if (Llamadaslibre.exists?(idReceptor: current_user.id))
      @llamadas = Llamadaslibre.where("idReceptor = ?", current_user.id)
-    else
-     redirect_to "/"
     end
   end
 
