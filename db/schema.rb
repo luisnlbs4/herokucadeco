@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_31_185827) do
+ActiveRecord::Schema.define(version: 2019_04_20_123617) do
 
   create_table "llamadaslibres", force: :cascade do |t|
     t.string "idEmisor"
     t.string "idReceptor"
     t.string "idSala"
     t.string "estado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "llamadasprogramadas", force: :cascade do |t|
+    t.string "user1"
+    t.string "user2"
+    t.date "fecha"
+    t.time "horaini"
+    t.time "horafin"
+    t.integer "idSala"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

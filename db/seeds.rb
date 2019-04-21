@@ -7,58 +7,59 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
   user = User.new
-	user.email = "admin@gmail.com"
+	user.email = "admin@cadeco.com"
 	user.password = "Secreto123"
 	user.password_confirmation = "Secreto123"
 	user.nombre = "Admin"
 	user.apellido = ""
   user.tipo = "admin"
-  user.estado = "activo"
+  user.estado = "inactivo"
 	user.save
 
   user = User.new
-  user.email = "luis@gmail.com"
+  user.email = "luis@cadeco.com"
   user.password = "Secreto123"
   user.password_confirmation = "Secreto123"
   user.nombre = "Luis"
   user.apellido = "Veizaga"
   user.tipo = "admin"
-  user.estado = "activo"
+  user.estado = "inactivo"
   user.save
 
 
   user = User.new
-  user.email = "andres@gmail.com"
+  user.email = "andres@cadeco.com"
   user.password = "Secreto123"
   user.password_confirmation = "Secreto123"
   user.nombre = "Julio Andres"
   user.apellido = "Rodrigez Balcazar"
   user.tipo = "normal"
-  user.estado = "activo"
+  user.estado = "inactivo"
   user.save
 
   user = User.new
-  user.email = "salvador@gmail.com"
+  user.email = "salvador@cadeco.com"
   user.password = "Secreto123"
   user.password_confirmation = "Secreto123"
   user.nombre = "Salvador Rodolfo"
   user.apellido = "Guitierres Salasar"
   user.tipo = "normal"
-  user.estado = "activo"
+  user.estado = "inactivo"
   user.save
 
   user = User.new
-  user.email = "juan@gmail.com"
+  user.email = "juan@cadeco.com"
   user.password = "Secreto123"
   user.password_confirmation = "Secreto123"
   user.nombre = "Juan Diego"
   user.apellido = "Leaño Perez"
   user.tipo = "normal"
-  user.estado = "activo"
+  user.estado = "inactivo"
   user.save
 
 
   sala = Sala.new
+  sala.id = 1
   sala.nombre = "sala 1"
   sala.apikey = "46271902"
   sala.sessionID = "2_MX40NjI3MTkwMn5-MTU1NDA0NzE3NDI1MX5ZdmFVQXFEdTVRZUFHUDBWa1g4Y25yY0J-fg"
@@ -69,6 +70,7 @@
 
 
   sala = Sala.new
+  sala.id = 2
   sala.nombre = "sala 2"
   sala.apikey = "46271902"
   sala.sessionID = "2_MX40NjI3MTkwMn5-MTU1NDA0NzMyNTc2MH4wSks5M3dzclgwYlZTQ3Z1cHdZWFVIUGV-fg"
@@ -79,6 +81,7 @@
 
 
   sala = Sala.new
+  sala.id = 3
   sala.nombre = "sala 3"
   sala.apikey = "46271902"
   sala.sessionID = "2_MX40NjI3MTkwMn5-MTU1NDA0NzM4OTkwOX50RiswU3ppSCtTaEsrR2lHWUltNXZ0T2J-fg"

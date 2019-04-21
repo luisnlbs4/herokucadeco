@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user1: MyString
+  user2: MyString
+  fecha: 2019-04-20
+  horaini: 2019-04-20 08:36:17
+  horafin: 2019-04-20 08:36:17
+  idSala: 
+
+two:
+  user1: MyString
+  user2: MyString
+  fecha: 2019-04-20
+  horaini: 2019-04-20 08:36:17
+  horafin: 2019-04-20 08:36:17
+  idSala: 
