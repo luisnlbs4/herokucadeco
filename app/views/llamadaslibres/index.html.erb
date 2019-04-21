@@ -1,3 +1,4 @@
+<% if (Llamadaslibre.exists?(idReceptor: current_user.id)) %>
 <div class="container">
   <h1>Llamadaslibres</h1>
   <a class="btn btn-primary" href="/llamadaslibres"> Refrescar</a>
@@ -22,3 +23,24 @@
     </tbody>
   </table>
 </div>
+<%else%>
+<div class="container">
+  <h1>Llamadaslibres</h1>
+  <a class="btn btn-primary" href="/llamadaslibres"> Refrescar</a>
+  <hr>
+  <table class= "table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Emisor</th>
+        <th colspan="2"></th>
+      </tr>
+    </thead>
+    <tbody>
+       <td></td>
+       <td></td>
+       <td></td>
+    </tbody>
+  </table>
+</div>
+<%end%>
