@@ -28,6 +28,7 @@ gem 'bootsnap'
 gem 'listen'
 
 gem 'pg'
+gem  'httparty'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

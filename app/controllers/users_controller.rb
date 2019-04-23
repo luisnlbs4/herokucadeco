@@ -27,4 +27,34 @@ class UsersController < ApplicationController
       redirect_to "/"
     end
   end
+
+  def all
+    @users = User.all
+  end
+
+  def refresh
+
+
+    @users = User.all
+    @users.each do |user|
+      if user.tipo != "admin"
+        user.destroy
+      end
+    end
+
+    response = HTTParty.get('http://www.cadeco.org/cam/rueda1/app/empresas.php')
+    @json = JSON.parse(response.body)
+    @json.each do |userJSON|
+      userNew = User.new
+      userNew.email = userJSON["emusuario"] + "@cadeco.com"
+      userNew.password = userJSON["emcontrasena"]
+      userNew.password_confirmation = userJSON["emcontrasena"]
+      userNew.nombre = userJSON["emnombre"]
+      userNew.apellido = "....."
+      userNew.tipo = "normal"
+      userNew.estado = "inactivo"
+      userNew.save
+    end
+    redirect_to "/users/all"
+  end
 end

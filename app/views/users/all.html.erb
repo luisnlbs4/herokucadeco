@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Lista de usuarios</h1><hr>
+    <a href="/users/resfresh" class="btn btn-primary"><i class="fa fa-refresh" aria-hidden="true"></i> Refrescar lista de usuarios</a>
+    <div class="table-responsive">
+      <br>
+      <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Username</th>
+          <th>Nombre</th>
+          <th>Estado</th>
+          <th>Tipo</th>
+        </tr>
+      </thead>
+      <tbody>
+          <% @contador = 0 %>
+          <% @users.each do |user| %>
+          <tr>
+          <td><%= @contador = @contador + 1 %></td>
+          <td><%= user.email.chomp("@cadeco.com") %></td>
+          <td><%= user.nombre %></td>
+          <td><%= user.estado %></td>
+          <td><%= user.tipo %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+</div>
+<br>
+<br>
