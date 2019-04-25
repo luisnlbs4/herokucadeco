@@ -49,7 +49,7 @@ class UsersController < ApplicationController
       userNew.email = userJSON["emusuario"] + "@cadeco.com"
       userNew.password = userJSON["emcontrasena"]
       userNew.password_confirmation = userJSON["emcontrasena"]
-      userNew.nombre = userJSON["emnombre"]
+      userNew.nombre = userJSON["emempresa"]
       userNew.apellido = "....."
       userNew.tipo = "normal"
       userNew.estado = "inactivo"

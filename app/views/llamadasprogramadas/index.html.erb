@@ -61,14 +61,14 @@
         <%  @user2 = User.where("email = ?", llamadasprogramada.user2 ).first%>
         <td><%= @user1.nombre %></td>
         <td><%= @user2.nombre %></td>
-        <% if ((llamadasprogramada.fecha.strftime("%Y-%m-%d") == Time.now.strftime("%Y-%m-%d")) && (llamadasprogramada.horaini.strftime("%H:%M") < Time.now.strftime("%H:%M")  && llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
+        <% if ((Time.now.strftime("%Y-%m-%d") == llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (llamadasprogramada.horafin.strftime("%H:%M") >= Time.now.strftime("%H:%M")))%>
         <td><%= link_to 'Entrar', llamadasprogramada , class: " btn btn-success"%></td>
         <% else %>
         <td><label> La llamada ya paso o no esta en hora</label></td>
         <% end %>
       </tr>
-      <% end %>
     <% end %>
+    <%end%>
   </tbody>
 </table>
 </div>

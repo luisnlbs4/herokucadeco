@@ -30,7 +30,7 @@
     }
     if(<%= @llamadasprogramada.horafin.strftime("%H") %> == hours){
       if(<%= @llamadasprogramada.horafin.strftime("%M") %> - 5 == minutes && seconds == 00){
-        alert("Su llamada ya acabara");
+        alert("Su llamada ya acabara en 5 minutos");
         date = new Date();
       }
       if(<%= @llamadasprogramada.horafin.strftime("%M") %> == minutes){
