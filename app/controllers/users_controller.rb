@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    @users = User.order("nombre ASC")
   end
 
   def logout
@@ -33,15 +33,12 @@ class UsersController < ApplicationController
   end
 
   def refresh
-
-
     @users = User.all
     @users.each do |user|
       if user.tipo != "admin"
         user.destroy
       end
     end
-
     response = HTTParty.get('http://www.cadeco.org/cam/rueda1/app/empresas.php')
     @json = JSON.parse(response.body)
     @json.each do |userJSON|
@@ -50,9 +47,18 @@ class UsersController < ApplicationController
       userNew.password = userJSON["emcontrasena"]
       userNew.password_confirmation = userJSON["emcontrasena"]
       userNew.nombre = userJSON["emempresa"]
-      userNew.apellido = "....."
       userNew.tipo = "normal"
       userNew.estado = "inactivo"
+      userNew.direccion = userJSON["emdireccion"]
+      userNew.pais = userJSON["empais"]
+      userNew.region = userJSON["emestado"]
+      userNew.ciudad = userJSON["emciudad"]
+      userNew.telefono = userJSON["emtelefono"]
+      userNew.fax = userJSON["emfax"]
+      userNew.correo = userJSON["emcorero"]
+      userNew.paginaweb = userJSON["emweb"]
+      userNew.oferta = userJSON["emoferta"]
+      userNew.demanda = userJSON["emdemanda"]
       userNew.save
     end
     redirect_to "/users/all"

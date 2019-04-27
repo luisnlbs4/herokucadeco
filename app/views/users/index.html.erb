@@ -1,33 +1,100 @@
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
 <div class="container">
     <h1>Lista de usuarios</h1><hr>
+    <div class="container">
+      <input class="form-control" id="myInput" type="text" placeholder="Buscador por nombre" >
+    </div>
+    <br>
     <div class="table-responsive">
       <table class="table">
       <thead>
         <tr>
           <th>#</th>
-          <th>Email</th>
+          <th></th>
           <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Estado</th>
-          <th>Acciones</th>
+            <th>Acciones</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody id="myTable">
           <% @contador = 0 %>
           <% @users.each do |user| %>
           <% if (user.tipo != "admin" && user.email != current_user.email) %>
-          <tr <% if (user.estado == "activo") %> class="table-success" <% else %> class="table-danger" <%end%> >
+          <tr>
           <td><%= @contador = @contador + 1 %></td>
-          <td><%= user.email %></td>
+          <td><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"  data-toggle="modal" data-target="#Modal<%= user.id %>" ></i></button></td>
+          <!-- Modal -->
+            <div class="modal fade" id="Modal<%= user.id %>" role="dialog">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title"><%= user.nombre %></h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label><strong>Direccion:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.direccion %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Pais:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.pais %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Estado o Región:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.region %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Ciudad:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.ciudad %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Telefono:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.telefono %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Fax:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.fax %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Correo Electronico:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.correo %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Pagina Web:</strong></label>
+                      <input type="text" class="form-control" value="<%= user.paginaweb %>" readonly>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Oferta:</strong></label>
+                      <textarea class="form-control" rows="4" readonly><%= user.oferta %></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label><strong>Demanda:</strong></label>
+                      <textarea class="form-control" rows="4" readonly><%= user.demanda %></textarea>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
           <td><%= user.nombre %></td>
-          <td><%= user.apellido %></td>
-          <td><%= user.estado %></td>
-          <td>
-            <% if (user.estado == "activo") %>
-            <a href="/users/crearllamada/<%= user.id %>" class="btn btn-success btn-sm"> Llamar </a>
-            <%end%>
-          </td>
-          </tr>
+          <% if (user.estado == "activo") %>
+          <td><a href="/users/crearllamada/<%= user.id %>" class="btn btn-success btn-sm"> Llamar </a> </td>
+          <% else %>
+          <td><font color="red">Inactivo</font></td>
+          <%end%>
+        </tr>
           <% end %>
         <% end %>
       </tbody>

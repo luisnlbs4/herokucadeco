@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_20_123617) do
+ActiveRecord::Schema.define(version: 2019_04_27_022956) do
 
   create_table "llamadaslibres", force: :cascade do |t|
     t.string "idEmisor"
@@ -55,6 +55,16 @@ ActiveRecord::Schema.define(version: 2019_04_20_123617) do
     t.datetime "updated_at", null: false
     t.string "estado"
     t.string "apellido"
+    t.string "direccion"
+    t.decimal "pais"
+    t.string "region"
+    t.string "ciudad"
+    t.string "telefono"
+    t.string "fax"
+    t.string "correo"
+    t.string "paginaweb"
+    t.text "oferta"
+    t.text "demanda"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

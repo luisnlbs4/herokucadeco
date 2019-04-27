@@ -1,112 +1,297 @@
 <% if current_user.email == @llamadasprogramada.user2 || current_user.email == @llamadasprogramada.user1 %>
-<div class="text-center">
-  <h2 id='clock' class='the-clock'></h2>
-</div>
-<hr>
 
-<script language="JavaScript">
-  let clock = document.getElementById('clock');
-  let time = setInterval(()=>{
-    startClock();
-  },1000);
+<% if ((Time.now.strftime("%Y-%m-%d") == @llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (@llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (@llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
 
-  function startClock(){
-    let date = new Date();
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-    let seconds = date.getSeconds();
-    clock.innerText = hours + ':' + minutes + ':' + seconds;
 
-    if(hours < 10){
-      clock.innerText = '0' + hours + ':' + minutes + ':' + seconds;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    else if(minutes < 10){
-      clock.innerText = hours + ':' + '0' + minutes + ':' + seconds;
-    }
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    else if(seconds < 10){
-       clock.innerText = hours + ':' + minutes + ':' + '0' + seconds;
-    }
-    if(<%= @llamadasprogramada.horafin.strftime("%H") %> == hours){
-      if(<%= @llamadasprogramada.horafin.strftime("%M") %> - 5 == minutes && seconds == 00){
-        alert("Su llamada ya acabara en 5 minutos");
-        date = new Date();
-      }
-      if(<%= @llamadasprogramada.horafin.strftime("%M") %> == minutes){
-        window.location.href="/llamadasprogramadas"
-      }
-    }
+    <style type="text/css" media="screen">
+        div.relative {
+          position: absolute;
+          left: 0%;
+          top: 15%%;
+          border: 3px solid #A8301C;
+        }
+
+        div.relative_main {
+          position: absolute;
+          left: 50%;
+          top: 15%%;
+          border: 3px solid #A8301C;
+        }
+
+        .float{
+          	position:fixed;
+          	width:80px;
+          	height:80px;
+          	bottom:10px;
+          	right:20px;
+          	background-color: red;
+          	color:#FFF;
+          	border-radius:50px;
+          	text-align:center;
+          }
+
+          .my-float{
+          	margin-top:32px;
+          }
+    </style>
+
+    <script>
+
+        <% @sala = Sala.where("id = ?", @llamadasprogramada.idSala ).first %>
+
+
+
+
+
+
+        var apiKey =  "<%= @sala.apikey %>";
+        var sessionId = "<%= @sala.sessionID %>";
+        var token = "<%= @sala.token %>";
+        var session = TB.initSession(sessionId);
+        TB.setLogLevel(TB.DEBUG);
+        session.addEventListener('sessionConnected',sessionConnectedHandler);
+        session.addEventListener('streamCreated',streamCreatedHandler);
+
+
+        session.connect(apiKey,token);
+        function sessionConnectedHandler(event){
+            var publisherOptions = {
+                width: '50%',
+                height: '100%'
+            };
+
+
+            session.publish("myPublisher", publisherOptions);
+            for (var i = 0; i < event.streams.length; i++) {
+                if (session.connection.connectionId != event.streams[i].connection.connectionId) {
+                    subscribeToStream(event.streams[i]);
+                }
+
+            }
+        }
+        function streamCreatedHandler(event){
+            var countPx = 0;
+            var total = 10;
+            for (var i = 0; i < event.streams.length; i++) {
+                if (session.connection.connectionId != event.streams[i].connection.connectionId) {
+                    total = total + countPx;
+                    subscribeToStream(event.streams[i], total);
+                    countPx = 210;
+                    console.log(total);
+                }
+
+            }
+        }
+
+        function subscribeToStream(stream){
+            var subscriptor = {
+               width: '50%',
+               height: '100%',
+            };
+            var div = document.createElement('div');
+            div.setAttribute('id','stream-' + stream.streamId);
+            div.setAttribute('class','relative');
+            document.body.appendChild(div);
+            session.subscribe(stream, div.id, subscriptor);
+        }
+    </script>
+</head>
+<body>
+
+  <% @user1 = User.where("email = ?",  @llamadasprogramada.user1 ).first %>
+  <% @user2 = User.where("email = ?",  @llamadasprogramada.user2 ).first %>
+
+  <div class="text-center">
+    <h2 id='clock' class='the-clock'></h2>
+  </div><br>
+  <div class="row">
+    <div class="col-6">
+        <button type="button" class="btn btn-primary btn-lg btn-block" name="button" data-toggle="modal" data-target="#Modaluser1"><%= @user1.nombre %></button>
+        <div class="modal fade" id="Modaluser1" role="dialog">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title"><%= @user1.nombre %></h4>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label><strong>Direccion:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.direccion %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Pais:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.pais %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Estado o Región:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.region %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Ciudad:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.ciudad %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Telefono:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.telefono %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Fax:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.fax %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Correo Electronico:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.correo %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Pagina Web:</strong></label>
+                  <input type="text" class="form-control" value="<%= @user1.paginaweb %>" readonly>
+                </div>
+                <div class="form-group">
+                  <label><strong>Oferta:</strong></label>
+                  <textarea class="form-control" rows="4" readonly><%= @user1.oferta %></textarea>
+                </div>
+                <div class="form-group">
+                  <label><strong>Demanda:</strong></label>
+                  <textarea class="form-control" rows="4" readonly><%= @user1.demanda %></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="col-6">
+      <button type="button" class="btn btn-primary btn-lg btn-block" name="button" data-toggle="modal" data-target="#Modaluser2"><%= @user2.nombre %></button>
+      <div class="modal fade" id="Modaluser2" role="dialog">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title"><%= @user2.nombre %></h4>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label><strong>Direccion:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.direccion %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Pais:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.pais %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Estado o Región:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.region %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Ciudad:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.ciudad %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Telefono:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.telefono %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Fax:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.fax %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Correo Electronico:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.correo %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Pagina Web:</strong></label>
+                <input type="text" class="form-control" value="<%= @user2.paginaweb %>" readonly>
+              </div>
+              <div class="form-group">
+                <label><strong>Oferta:</strong></label>
+                <textarea class="form-control" rows="4" readonly><%= @user1.oferta %></textarea>
+              </div>
+              <div class="form-group">
+                <label><strong>Demanda:</strong></label>
+                <textarea class="form-control" rows="4" readonly><%= @user1.demanda %></textarea>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <script>
+  function closecall() {
+    window.location.href="/llamadasprogramadas"
+    window.open("http://www.cadeco.org/cam/rueda1/formulariodecitas.php?empresa=<%=@user1.nombre%>&empresa1=<%=@user2.nombre%>", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=800");
   }
+  </script>
 
-</script>
+  <script language="JavaScript">
+    let clock = document.getElementById('clock');
+    let time = setInterval(()=>{
+      startClock();
+    },1000);
 
+    function startClock(){
+      let date = new Date();
+      let hours = date.getHours();
+      let minutes = date.getMinutes();
+      let seconds = date.getSeconds();
+      clock.innerText = hours + ':' + minutes + ':' + seconds;
 
+      if(hours < 10){
+        clock.innerText = '0' + hours + ':' + minutes + ':' + seconds;
+      }
 
+      else if(minutes < 10){
+        clock.innerText = hours + ':' + '0' + minutes + ':' + seconds;
+      }
 
-
-
-
-
-
-
-
-<% @sala = Sala.where("id = ?", @llamadasprogramada.idSala ).first %>
-<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-<script>
-    var apiKey =  "<%= @sala.apikey %>";
-    var sessionId = "<%= @sala.sessionID %>";
-    var token = "<%= @sala.token %>";
-
-    var session = TB.initSession(sessionId);
-    TB.setLogLevel(TB.DEBUG);
-    session.addEventListener('sessionConnected',sessionConnectedHandler);
-    session.addEventListener('streamCreated',streamCreatedHandler);
-
-
-
-
-
-    session.connect(apiKey,token);
-    function sessionConnectedHandler(event){
-      var publisherOptions = {
-        width: 500,
-        height: 400,
-     };
-        session.publish("myPublisher",publisherOptions);
-        for (var i = 0; i < event.streams.length; i++) {
-            if (session.connection.connectionId != event.streams[i].connection.connectionId) {
-                subscribeToStream(event.streams[i]);
-            }
-
+      else if(seconds < 10){
+         clock.innerText = hours + ':' + minutes + ':' + '0' + seconds;
+      }
+      if(<%= @llamadasprogramada.horafin.strftime("%H") %> == hours){
+        if(<%= @llamadasprogramada.horafin.strftime("%M") %> - 5 == minutes && seconds == 00){
+          alert("Su llamada ya acabara en 5 minutos");
+          date = new Date();
         }
-    }
-    function streamCreatedHandler(event){
-        for (var i = 0; i < event.streams.length; i++) {
-            if (session.connection.connectionId != event.streams[i].connection.connectionId) {
-                subscribeToStream(event.streams[i]);
-            }
-
+        if(<%= @llamadasprogramada.horafin.strftime("%M") %> == minutes){
+          window.location.href="/llamadasprogramadas"
         }
+      }
     }
-    function subscribeToStream(stream){
-      var subscriptor = {
-         width: 500,
-         height: 400,
-      };
-        var div = document.createElement('div');
-        div.setAttribute('id','stream-' + stream.streamId);
-        document.body.appendChild(div);
-        session.subscribe(stream, div.id,subscriptor);
-    }
-</script>
-  <div class="container" id="myPublisher"></div>
 
-<footer>
-  <a href="/llamadasprogramadas" class="btn btn-danger btn-block"><i class="fa fa-phone" aria-hidden="true"></i> Colgar</a>
-</footer>
+  </script>
+<div id="myPublisher" class="relative_main"></div>
+
+<a onclick="closecall()"class="float">
+  <i class="fa fa-phone my-float"></i>
+</a>
+
+
+
+
+</body>
+</html>
+<%else%>
+
+<meta http-equiv="refresh" content="0; url= /" />
+<%end%>
 
 <%else%>
   <meta http-equiv="refresh" content="0; url= /" />

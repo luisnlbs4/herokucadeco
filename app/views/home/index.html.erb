@@ -1,11 +1,17 @@
 <% if user_signed_in? %>
-<h1>Bienvenido <%= current_user.nombre %></h1>
+<h2 class="text-center">Bienvenido <%= current_user.nombre %></h2>
+
+<br>
+<img src="http://www.cadeco.org/cam/rueda1/imagen/pie2.jpg" class="img-fluid" alt="Responsive image">
 <%
   current_user.estado = "activo"
   current_user.save
-
 %>
-
+<footer style="background-color:  #001B47;">
+  <br>
+  <h3 class="text-center"> <font color= " #90AE39"> Modulo de Video Llamadas</font> </h3>
+  <br>
+</footer>
 <% else %>
 <meta http-equiv="refresh" content="0; url= /users/sign_in" />
 <% end %>
