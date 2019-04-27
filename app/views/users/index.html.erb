@@ -31,7 +31,7 @@ $(document).ready(function(){
           <% if (user.tipo != "admin" && user.email != current_user.email) %>
           <tr>
           <td><%= @contador = @contador + 1 %></td>
-          <td><button type="button" class="btn btn-primary btn-sm"><i class="fa fa-eye"  data-toggle="modal" data-target="#Modal<%= user.id %>" ></i></button></td>
+          <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= user.id %>"><i class="fa fa-eye"></i></button></td>
           <!-- Modal -->
             <div class="modal fade" id="Modal<%= user.id %>" role="dialog">
               <div class="modal-dialog modal-lg">

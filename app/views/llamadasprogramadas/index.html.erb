@@ -38,31 +38,143 @@
 <table class="table">
   <thead>
     <tr>
+      <th></th>
       <th>Fecha: </th>
       <th>Hora Inicial:</th>
       <th>Hora Fin: </th>
       <th>Usuario Local:</th>
       <th>Usuario Invitado:</th>
-      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @llamadasprogramadas.each do |llamadasprogramada| %>
       <tr>
+        <% if ((Time.now.strftime("%Y-%m-%d") == llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
+        <td><%= link_to 'Entrar', llamadasprogramada , class: " btn btn-success btn-sm"%></td>
+        <% else %>
+        <td><label><font color= red>La llamada ya paso o aun Falta </font></label></td>
+        <% end %>
         <% if current_user.email == llamadasprogramada.user2 || current_user.email == llamadasprogramada.user1  %>
         <td><%= llamadasprogramada.fecha.strftime("%Y-%m-%d") %></td>
         <td><%= llamadasprogramada.horaini.strftime("%H:%M") %></td>
         <td><%= llamadasprogramada.horafin.strftime("%H:%M") %></td>
-        <%  @user1 = User.where("email = ?", llamadasprogramada.user1 ).first  %>
+        <%  @user1 = User.where("email = ?", llamadasprogramada.user1 ).first%>
         <%  @user2 = User.where("email = ?", llamadasprogramada.user2 ).first%>
-        <td><%= @user1.nombre %></td>
-        <td><%= @user2.nombre %></td>
-        <% if ((Time.now.strftime("%Y-%m-%d") == llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
-        <td><%= link_to 'Entrar', llamadasprogramada , class: " btn btn-success"%></td>
-        <% else %>
-        <td><label> La llamada ya paso o no esta en hora</label></td>
-        <% end %>
+        <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= @user1.id %>"><i class="fa fa-eye"></i></button>
+         <%= @user1.nombre %></td>
+
+         <div class="modal fade" id="Modal<%= @user1.id %>" role="dialog">
+           <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h4 class="modal-title"><%= @user1.nombre %></h4>
+               </div>
+               <div class="modal-body">
+                 <div class="form-group">
+                   <label><strong>Direccion:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.direccion %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Pais:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.pais %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Estado o Región:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.region %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Ciudad:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.ciudad %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Telefono:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.telefono %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Fax:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.fax %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Correo Electronico:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.correo %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Pagina Web:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user1.paginaweb %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Oferta:</strong></label>
+                   <textarea class="form-control" rows="4" readonly><%= @user1.oferta %></textarea>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Demanda:</strong></label>
+                   <textarea class="form-control" rows="4" readonly><%= @user1.demanda %></textarea>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               </div>
+             </div>
+           </div>
+         </div>
+
+        <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#ModalI<%= @user2.id %>"><i class="fa fa-eye"></i></button>
+         <%= @user2.nombre %></td>
+         <div class="modal fade" id="ModalI<%= @user2.id %>" role="dialog">
+           <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h4 class="modal-title"><%= @user2.nombre %></h4>
+               </div>
+               <div class="modal-body">
+                 <div class="form-group">
+                   <label><strong>Direccion:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.direccion %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Pais:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.pais %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Estado o Región:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.region %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Ciudad:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.ciudad %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Telefono:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.telefono %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Fax:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.fax %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Correo Electronico:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.correo %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Pagina Web:</strong></label>
+                   <input type="text" class="form-control" value="<%= @user2.paginaweb %>" readonly>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Oferta:</strong></label>
+                   <textarea class="form-control" rows="4" readonly><%= @user2.oferta %></textarea>
+                 </div>
+                 <div class="form-group">
+                   <label><strong>Demanda:</strong></label>
+                   <textarea class="form-control" rows="4" readonly><%= @user2.demanda %></textarea>
+                 </div>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+               </div>
+             </div>
+           </div>
+         </div>
       </tr>
     <% end %>
     <%end%>
