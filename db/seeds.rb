@@ -26,7 +26,6 @@
   user.estado = "inactivo"
   user.save
 
-
   user = User.new
   user.email = "andres@cadeco.com"
   user.password = "Secreto123"
@@ -53,6 +52,37 @@
   user.password_confirmation = "Secreto123"
   user.nombre = "Juan Diego"
   user.apellido = "Leaño Perez"
+  user.tipo = "normal"
+  user.estado = "inactivo"
+  user.save
+
+
+  user = User.new
+  user.email = "gabriel@cadeco.com"
+  user.password = "Secreto123"
+  user.password_confirmation = "Secreto123"
+  user.nombre = "Gabriel Rojas"
+  user.apellido = ""
+  user.tipo = "normal"
+  user.estado = "inactivo"
+  user.save
+
+  user = User.new
+  user.email = "jeyson@cadeco.com"
+  user.password = "Secreto123"
+  user.password_confirmation = "Secreto123"
+  user.nombre = "Jeyson Mirabal"
+  user.apellido = ""
+  user.tipo = "normal"
+  user.estado = "inactivo"
+  user.save
+
+  user = User.new
+  user.email = "camara@cadeco.com"
+  user.password = "Secreto123"
+  user.password_confirmation = "Secreto123"
+  user.nombre = "camara de Comercio"
+  user.apellido = ""
   user.tipo = "normal"
   user.estado = "inactivo"
   user.save
