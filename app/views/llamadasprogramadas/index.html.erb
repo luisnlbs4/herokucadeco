@@ -50,12 +50,12 @@
   <tbody>
     <% @llamadasprogramadas.each do |llamadasprogramada| %>
       <tr>
+        <% if current_user.email == llamadasprogramada.user2 || current_user.email == llamadasprogramada.user1  %>
         <% if ((Time.now.strftime("%Y-%m-%d") == llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
         <td><%= link_to 'Entrar', llamadasprogramada , class: " btn btn-success btn-sm"%></td>
         <% else %>
         <td><label><font color= red>La llamada ya paso o aun Falta </font></label></td>
         <% end %>
-        <% if current_user.email == llamadasprogramada.user2 || current_user.email == llamadasprogramada.user1  %>
         <td><%= llamadasprogramada.fecha.strftime("%Y-%m-%d") %></td>
         <td><%= llamadasprogramada.horaini.strftime("%H:%M") %></td>
         <td><%= llamadasprogramada.horafin.strftime("%H:%M") %></td>
