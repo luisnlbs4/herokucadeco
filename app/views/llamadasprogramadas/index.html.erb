@@ -1,9 +1,10 @@
 <div class="container">
 
-<h1>Lllamadas programadas</h1>
+<h1>Lllamadas programadas</h1> (Se recomienda que su hora este en hora de Bolivia : <%= Time.now.strftime("%H:%M") %>)
+<br><br>
+<input type="button" class="btn btn-primary" value="Recargar pagina" onClick="document.location.reload(true)">
 <hr>
-
-<label>Hora Actual: </label> <h2 id='clock' class='the-clock'></h2>
+<label>Hora Actual de su computador: </label> <h2 id='clock' class='the-clock'></h2>
 
 <script language="JavaScript">
   let clock = document.getElementById('clock');
@@ -34,9 +35,6 @@
   }
 
 </script>
-
-
-<%=Time.now %>
 <table class="table">
   <thead>
     <tr>
