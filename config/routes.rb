@@ -7,9 +7,13 @@ Rails.application.routes.draw do
 
   # get 'users/crearllamada/:idemisor'
   get 'users/logout'
+  get 'users/activar'
+
   get '/users/all' => 'users#all'
   get 'users/index'
   get '/users/resfresh' => 'users#refresh'
+  get '/users/cambio' => 'users#cambio'
+
 
   devise_for :users
   get 'home/index'

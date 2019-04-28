@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_27_022956) do
+ActiveRecord::Schema.define(version: 2019_04_28_172015) do
 
   create_table "llamadaslibres", force: :cascade do |t|
     t.string "idEmisor"
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2019_04_27_022956) do
     t.string "estado"
     t.string "apellido"
     t.string "direccion"
-    t.decimal "pais"
+    t.string "pais"
     t.string "region"
     t.string "ciudad"
     t.string "telefono"

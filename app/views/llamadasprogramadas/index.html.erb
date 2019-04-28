@@ -1,6 +1,6 @@
 <div class="container">
 
-<h1>Lllamadas programadas</h1> (Se recomienda que su hora este en hora de Bolivia : <%= Time.now.strftime("%H:%M") %>)
+<h1>Mi Agenda: </h1> (Se recomienda que su hora este en hora de Bolivia : <%= Time.now.strftime("%H:%M") %>)
 <br><br>
 <input type="button" class="btn btn-primary" value="Recargar pagina" onClick="document.location.reload(true)">
 <hr>
@@ -42,8 +42,7 @@
       <th>Fecha: </th>
       <th>Hora Inicial:</th>
       <th>Hora Fin: </th>
-      <th>Usuario Local:</th>
-      <th>Usuario Invitado:</th>
+      <th>Empresa:</th>
     </tr>
   </thead>
 
@@ -61,6 +60,7 @@
         <td><%= llamadasprogramada.horafin.strftime("%H:%M") %></td>
         <%  @user1 = User.where("email = ?", llamadasprogramada.user1 ).first%>
         <%  @user2 = User.where("email = ?", llamadasprogramada.user2 ).first%>
+        <% if current_user.email == llamadasprogramada.user2%>
         <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= @user1.id %>"><i class="fa fa-eye"></i></button>
          <%= @user1.nombre %></td>
 
@@ -119,6 +119,8 @@
            </div>
          </div>
 
+         <%else%>
+
         <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#ModalI<%= @user2.id %>"><i class="fa fa-eye"></i></button>
          <%= @user2.nombre %></td>
          <div class="modal fade" id="ModalI<%= @user2.id %>" role="dialog">
@@ -175,6 +177,7 @@
              </div>
            </div>
          </div>
+         <%end%>
       </tr>
     <% end %>
     <%end%>

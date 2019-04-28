@@ -9,6 +9,25 @@ class UsersController < ApplicationController
     redirect_to destroy_user_session_path
   end
 
+  def cambio
+    @user = User.where("email = ?", "admin@cadeco.com").first
+    @estado = @user.apellido
+  end
+
+  def activar
+    @user = User.where("email = ?", "admin@cadeco.com").first
+    @estado = @user.apellido
+    if @user.apellido == "Activo"
+       @user.apellido  = "Inactivo"
+       @user.save
+    else
+      @user.apellido  = "Activo"
+      @user.save
+    end
+    redirect_to "/users/cambio"
+  end
+
+
 
   def crearllamada
     @salas = Sala.where("estado = ?", "libre")

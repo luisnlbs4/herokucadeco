@@ -1,0 +1,18 @@
+<div class="container jumbotron">
+  <br><br>
+    <% if @estado == "Activo"%>
+    <div class="text-center">
+      <h1> <font color = green>  La Seccion de "Llamadas Libres" esta activa </font></h1>
+      <br><br>
+      <a href="/users/activar" class = "btn btn-danger">Bloquear las llamadas Libres</a>
+    </div>
+    <%else%>
+
+    <div class="text-center">
+      <h1> <font color = red>  La Seccion de "Llamadas Libres" esta Bloqueda </font></h1>
+      <br><br>
+      <a href="/users/activar" class = "btn btn-success">Activar las llamadas Libres</a>
+    </div>
+    <%end%>
+  <br><br>
+</div>

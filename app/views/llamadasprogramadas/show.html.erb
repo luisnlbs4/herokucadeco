@@ -51,10 +51,6 @@
         <% @sala = Sala.where("id = ?", @llamadasprogramada.idSala ).first %>
 
 
-
-
-
-
         var apiKey =  "<%= @sala.apikey %>";
         var sessionId = "<%= @sala.sessionID %>";
         var token = "<%= @sala.token %>";
@@ -113,11 +109,10 @@
   <% @user2 = User.where("email = ?",  @llamadasprogramada.user2 ).first %>
 
   <div class="text-center">
-    <h2 id='clock' class='the-clock'></h2>
+    <h4>Hora Actual: </h4><h2 id='clock' class='the-clock'></h2>
   </div><br>
-  <div class="row">
-    <div class="col-6">
-        <button type="button" class="btn btn-primary btn-lg btn-block" name="button" data-toggle="modal" data-target="#Modaluser1"><%= @user1.nombre %></button>
+  <%  if current_user.email == @llamadasprogramada.user2 %>
+      <button type="button" class="btn btn-primary btn-block container" name="button" data-toggle="modal" data-target="#Modaluser1"><%= @user1.nombre %></button>
         <div class="modal fade" id="Modaluser1" role="dialog">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -172,9 +167,8 @@
             </div>
           </div>
         </div>
-    </div>
-    <div class="col-6">
-      <button type="button" class="btn btn-primary btn-lg btn-block" name="button" data-toggle="modal" data-target="#Modaluser2"><%= @user2.nombre %></button>
+    <%else%>
+      <button type="button" class="btn btn-primary btn-block container" name="button" data-toggle="modal" data-target="#Modaluser2"><%= @user2.nombre %></button>
       <div class="modal fade" id="Modaluser2" role="dialog">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
@@ -229,8 +223,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+<%end%>
 
   <hr>
 
