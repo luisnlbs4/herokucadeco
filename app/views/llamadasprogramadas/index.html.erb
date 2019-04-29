@@ -60,7 +60,7 @@
         <td><%= llamadasprogramada.horafin.strftime("%H:%M") %></td>
         <%  @user1 = User.where("email = ?", (llamadasprogramada.user1).downcase ).first%>
         <%  @user2 = User.where("email = ?", (llamadasprogramada.user2).downcase ).first%>
-        <% if current_user.email == llamadasprogramada.user2%>
+        <% if current_user.email == (llamadasprogramada.user2).downcase%>
         <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= @user1.id %>"><i class="fa fa-eye"></i></button>
          <%= @user1.nombre %></td>
 
