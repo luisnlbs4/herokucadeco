@@ -90,7 +90,7 @@ $(document).ready(function(){
             </div>
           <td><%= user.nombre %></td>
           <% if (user.estado == "activo") %>
-          <td><a href="/users/crearllamada/<%= user.id %>" class="btn btn-success btn-sm"> Llamar </a> </td>
+          <td><a href="/users/crearllamada/<%= (user.id).to_s %>" class="btn btn-success btn-sm"> Llamar </a> </td>
           <% else %>
           <td><font color="red">Inactivo</font></td>
           <%end%>
