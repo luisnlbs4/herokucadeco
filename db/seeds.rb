@@ -999,16 +999,6 @@
 
   # -------------------------TURNO-2-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "FABNAHOYY" + "@cadeco.com"
   agenda.user2 = "NMLDBIJLN" + "@cadeco.com"
@@ -1019,15 +1009,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "TDFATAHMI" + "@cadeco.com"
@@ -1039,15 +1020,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 3
-  sala.nombre = "3"
-  sala.apikey = "46318762"
-  sala.sessionID = "1_MX40NjMxODc2Mn5-MTU1NjQ5MjQwMzE4NH5vZTJZVmptYXVLMW9uUDQ4UENUQkFodDN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc2MiZzaWc9OGE3ZjdmMDk3MWE3NzAxZmM0OGJkNmE1OTJkNDc0ZjIyM2NjZDE4NjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMyTW41LU1UVTFOalE1TWpRd016RTROSDV2WlRKWlZtcHRZWFZMTVc5dVVEUTRVRU5VUWtGb2RETi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDMxJm5vbmNlPTAuMjczNTYxNDkyNTgxODU4MTMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQzMSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "HCNHGGGUR" + "@cadeco.com"
@@ -1059,15 +1031,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 4
-  sala.nombre = "4"
-  sala.apikey = "46318752"
-  sala.sessionID = "1_MX40NjMxODc1Mn5-MTU1NjQ5MjM2NDY4N35UZmplbnJWQkNwQUMyNzFMS2lFVDhBMGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc1MiZzaWc9YzZjNWVlZjhiMmZkYmEwYWEzZjhiZGI3NzNkZGJhMDQ1M2Q4ZTE5YjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMxTW41LU1UVTFOalE1TWpNMk5EWTROMzVVWm1wbGJuSldRa053UVVNeU56Rk1TMmxGVkRoQk1HTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDAxJm5vbmNlPTAuMzE4MzIyOTM2NTc3OTAxNjcmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQwMCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1079,16 +1042,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 5
-  sala.nombre = "5"
-  sala.apikey = "46318772"
-  sala.sessionID = "1_MX40NjMxODc3Mn5-MTU1NjQ5MjYzOTE0M35GdWFIdnJSRGdTTGYySXBQQy9HeGFQcGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc3MiZzaWc9MmRlZjQwZjM3ZGRlNmE5MWM5MGQ2Mzg3MTk2MjBlMmIxY2UxYTQ4ODpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMzTW41LU1UVTFOalE1TWpZek9URTBNMzVHZFdGSWRuSlNSR2RUVEdZeVNYQlFReTlIZUdGUWNHTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNjQ3Jm5vbmNlPTAuOTAzNTE2MjEwMzgwNDQ3MyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0NjQ2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
   agenda.user2 = "TFYYXFXGO" + "@cadeco.com"
@@ -1098,16 +1051,6 @@
   agenda.horafin = Time.zone.strptime("10:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
-
-  sala = Sala.new
-  sala.id = 6
-  sala.nombre = "6"
-  sala.apikey = "46318782"
-  sala.sessionID = "1_MX40NjMxODc4Mn5-MTU1NjQ5Mjg0MTU3NH4vOHQ0ZHlyQXZRTHphNmZzQUlycHpsWkh-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc4MiZzaWc9YTBmZmFiNTAwMjJiY2NjMThhNDdkMzY1NDA1OWRiNTcyZDQ4YzAxYTpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGM0TW41LU1UVTFOalE1TWpnME1UVTNOSDR2T0hRMFpIbHlRWFpSVEhwaE5tWnpRVWx5Y0hwc1draC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyODU1Jm5vbmNlPTAuNDAxNjg4MDA5MDA1ODU0OCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0ODU1JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "KDGXSEFHB" + "@cadeco.com"
@@ -1119,16 +1062,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 7
-  sala.nombre = "7"
-  sala.apikey = "46318792"
-  sala.sessionID = "2_MX40NjMxODc5Mn5-MTU1NjQ5Mjk1NzMzMX4rbHpFSkF4YThmWWgzWHZ3eDV0UFJjd05-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc5MiZzaWc9MzVlNmEzZDIyYWFiMzJjMzA5MzY4MmNmZTRiZjE2ZDdkNmU5MmQyNzpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGM1TW41LU1UVTFOalE1TWprMU56TXpNWDRyYkhwRlNrRjRZVGhtV1dneldIWjNlRFYwVUZKamQwNS1mZyZjcmVhdGVfdGltZT0xNTU2NDkzMDgyJm5vbmNlPTAuNDExOTcyNzQ0NzYwMjM5MDQmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NTA4MCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "NKDCZCUWQ" + "@cadeco.com"
   agenda.user2 = "HAGKUCMTC" + "@cadeco.com"
@@ -1138,16 +1071,6 @@
   agenda.horafin = Time.zone.strptime("10:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
-
-  sala = Sala.new
-  sala.id = 8
-  sala.nombre = "8"
-  sala.apikey = "46318802"
-  sala.sessionID = "1_MX40NjMxODgwMn5-MTU1NjQ5MzA0OTE5MX5nYlJBRVhuM3hqQVR2SW1PVzVtcjZjTWR-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODgwMiZzaWc9MjI3Y2U2Y2E4NTAwYzhmZjNjNmEzYWY0NjFkYWIwM2U0M2UxMzViMTpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGd3TW41LU1UVTFOalE1TXpBME9URTVNWDVuWWxKQlJWaHVNM2hxUVZSMlNXMVBWelZ0Y2paalRXUi1mZyZjcmVhdGVfdGltZT0xNTU2NDkzMDY5Jm5vbmNlPTAuODY1MjM4NzY4NTAzODQ3NiZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg1MDY5JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YJYCIIOFJ" + "@cadeco.com"
@@ -1172,16 +1095,6 @@
 
   # ----------------------------TURNO-3-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "SIWCCALAD" + "@cadeco.com"
   agenda.user2 = "NMLDBIJLN" + "@cadeco.com"
@@ -1192,15 +1105,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "HCNHGGGUR" + "@cadeco.com"
@@ -1212,15 +1116,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 3
-  sala.nombre = "3"
-  sala.apikey = "46318762"
-  sala.sessionID = "1_MX40NjMxODc2Mn5-MTU1NjQ5MjQwMzE4NH5vZTJZVmptYXVLMW9uUDQ4UENUQkFodDN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc2MiZzaWc9OGE3ZjdmMDk3MWE3NzAxZmM0OGJkNmE1OTJkNDc0ZjIyM2NjZDE4NjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMyTW41LU1UVTFOalE1TWpRd016RTROSDV2WlRKWlZtcHRZWFZMTVc5dVVEUTRVRU5VUWtGb2RETi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDMxJm5vbmNlPTAuMjczNTYxNDkyNTgxODU4MTMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQzMSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1232,15 +1127,7 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 4
-  sala.nombre = "4"
-  sala.apikey = "46318752"
-  sala.sessionID = "1_MX40NjMxODc1Mn5-MTU1NjQ5MjM2NDY4N35UZmplbnJWQkNwQUMyNzFMS2lFVDhBMGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc1MiZzaWc9YzZjNWVlZjhiMmZkYmEwYWEzZjhiZGI3NzNkZGJhMDQ1M2Q4ZTE5YjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMxTW41LU1UVTFOalE1TWpNMk5EWTROMzVVWm1wbGJuSldRa053UVVNeU56Rk1TMmxGVkRoQk1HTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDAxJm5vbmNlPTAuMzE4MzIyOTM2NTc3OTAxNjcmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQwMCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
@@ -1252,16 +1139,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 5
-  sala.nombre = "5"
-  sala.apikey = "46318772"
-  sala.sessionID = "1_MX40NjMxODc3Mn5-MTU1NjQ5MjYzOTE0M35GdWFIdnJSRGdTTGYySXBQQy9HeGFQcGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc3MiZzaWc9MmRlZjQwZjM3ZGRlNmE5MWM5MGQ2Mzg3MTk2MjBlMmIxY2UxYTQ4ODpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMzTW41LU1UVTFOalE1TWpZek9URTBNMzVHZFdGSWRuSlNSR2RUVEdZeVNYQlFReTlIZUdGUWNHTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNjQ3Jm5vbmNlPTAuOTAzNTE2MjEwMzgwNDQ3MyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0NjQ2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "KDGXSEFHB" + "@cadeco.com"
   agenda.user2 = "PONEUTNNT" + "@cadeco.com"
@@ -1272,15 +1149,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 6
-  sala.nombre = "6"
-  sala.apikey = "46318782"
-  sala.sessionID = "1_MX40NjMxODc4Mn5-MTU1NjQ5Mjg0MTU3NH4vOHQ0ZHlyQXZRTHphNmZzQUlycHpsWkh-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc4MiZzaWc9YTBmZmFiNTAwMjJiY2NjMThhNDdkMzY1NDA1OWRiNTcyZDQ4YzAxYTpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGM0TW41LU1UVTFOalE1TWpnME1UVTNOSDR2T0hRMFpIbHlRWFpSVEhwaE5tWnpRVWx5Y0hwc1draC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyODU1Jm5vbmNlPTAuNDAxNjg4MDA5MDA1ODU0OCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0ODU1JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "NKDCZCUWQ" + "@cadeco.com"
@@ -1292,15 +1160,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 7
-  sala.nombre = "7"
-  sala.apikey = "46271902"
-  sala.sessionID = "2_MX40NjI3MTkwMn5-MTU1NDA0NzM4OTkwOX50RiswU3ppSCtTaEsrR2lHWUltNXZ0T2J-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjI3MTkwMiZzaWc9MWYxYjYwOGVhODA4MTAxMWM0OTk1ZjBkZTUxYThhZTIzZTE3MDU1MzpzZXNzaW9uX2lkPTJfTVg0ME5qSTNNVGt3TW41LU1UVTFOREEwTnpNNE9Ua3dPWDUwUmlzd1UzcHBTQ3RUYUVzclIybEhXVWx0TlhaMFQySi1mZyZjcmVhdGVfdGltZT0xNTU0MDQ3Mzk3Jm5vbmNlPTAuMzAyMzMxMDcxNjY2MzAyMzUmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1NjYzOTM5NiZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YJYCIIOFJ" + "@cadeco.com"
@@ -1321,15 +1180,7 @@
 
   # ----------------------------TURNO-4-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "TDFATAHMI" + "@cadeco.com"
@@ -1341,15 +1192,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "HCNHGGGUR" + "@cadeco.com"
@@ -1361,15 +1203,7 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 3
-  sala.nombre = "3"
-  sala.apikey = "46318762"
-  sala.sessionID = "1_MX40NjMxODc2Mn5-MTU1NjQ5MjQwMzE4NH5vZTJZVmptYXVLMW9uUDQ4UENUQkFodDN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc2MiZzaWc9OGE3ZjdmMDk3MWE3NzAxZmM0OGJkNmE1OTJkNDc0ZjIyM2NjZDE4NjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMyTW41LU1UVTFOalE1TWpRd016RTROSDV2WlRKWlZtcHRZWFZMTVc5dVVEUTRVRU5VUWtGb2RETi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDMxJm5vbmNlPTAuMjczNTYxNDkyNTgxODU4MTMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQzMSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1381,16 +1215,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 4
-  sala.nombre = "4"
-  sala.apikey = "46318752"
-  sala.sessionID = "1_MX40NjMxODc1Mn5-MTU1NjQ5MjM2NDY4N35UZmplbnJWQkNwQUMyNzFMS2lFVDhBMGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc1MiZzaWc9YzZjNWVlZjhiMmZkYmEwYWEzZjhiZGI3NzNkZGJhMDQ1M2Q4ZTE5YjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMxTW41LU1UVTFOalE1TWpNMk5EWTROMzVVWm1wbGJuSldRa053UVVNeU56Rk1TMmxGVkRoQk1HTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDAxJm5vbmNlPTAuMzE4MzIyOTM2NTc3OTAxNjcmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQwMCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
   agenda.user2 = "DXGCHFCRA" + "@cadeco.com"
@@ -1400,16 +1224,6 @@
   agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
-
-  sala = Sala.new
-  sala.id = 5
-  sala.nombre = "5"
-  sala.apikey = "46318772"
-  sala.sessionID = "1_MX40NjMxODc3Mn5-MTU1NjQ5MjYzOTE0M35GdWFIdnJSRGdTTGYySXBQQy9HeGFQcGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc3MiZzaWc9MmRlZjQwZjM3ZGRlNmE5MWM5MGQ2Mzg3MTk2MjBlMmIxY2UxYTQ4ODpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMzTW41LU1UVTFOalE1TWpZek9URTBNMzVHZFdGSWRuSlNSR2RUVEdZeVNYQlFReTlIZUdGUWNHTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNjQ3Jm5vbmNlPTAuOTAzNTE2MjEwMzgwNDQ3MyZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0NjQ2JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YJYCIIOFJ" + "@cadeco.com"
@@ -1433,15 +1247,6 @@
 
   # ----------------------------TURNO-5-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "HCNHGGGUR" + "@cadeco.com"
@@ -1453,15 +1258,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1473,15 +1269,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 3
-  sala.nombre = "3"
-  sala.apikey = "46318762"
-  sala.sessionID = "1_MX40NjMxODc2Mn5-MTU1NjQ5MjQwMzE4NH5vZTJZVmptYXVLMW9uUDQ4UENUQkFodDN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc2MiZzaWc9OGE3ZjdmMDk3MWE3NzAxZmM0OGJkNmE1OTJkNDc0ZjIyM2NjZDE4NjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMyTW41LU1UVTFOalE1TWpRd016RTROSDV2WlRKWlZtcHRZWFZMTVc5dVVEUTRVRU5VUWtGb2RETi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDMxJm5vbmNlPTAuMjczNTYxNDkyNTgxODU4MTMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQzMSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
@@ -1493,15 +1280,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 4
-  sala.nombre = "4"
-  sala.apikey = "46318752"
-  sala.sessionID = "1_MX40NjMxODc1Mn5-MTU1NjQ5MjM2NDY4N35UZmplbnJWQkNwQUMyNzFMS2lFVDhBMGN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc1MiZzaWc9YzZjNWVlZjhiMmZkYmEwYWEzZjhiZGI3NzNkZGJhMDQ1M2Q4ZTE5YjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMxTW41LU1UVTFOalE1TWpNMk5EWTROMzVVWm1wbGJuSldRa053UVVNeU56Rk1TMmxGVkRoQk1HTi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDAxJm5vbmNlPTAuMzE4MzIyOTM2NTc3OTAxNjcmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQwMCZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YJYCIIOFJ" + "@cadeco.com"
@@ -1519,15 +1297,6 @@
 
   # ----------------------------TURNO-6-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "HCNHGGGUR" + "@cadeco.com"
@@ -1539,15 +1308,7 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1559,15 +1320,7 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 3
-  sala.nombre = "3"
-  sala.apikey = "46318762"
-  sala.sessionID = "1_MX40NjMxODc2Mn5-MTU1NjQ5MjQwMzE4NH5vZTJZVmptYXVLMW9uUDQ4UENUQkFodDN-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODc2MiZzaWc9OGE3ZjdmMDk3MWE3NzAxZmM0OGJkNmE1OTJkNDc0ZjIyM2NjZDE4NjpzZXNzaW9uX2lkPTFfTVg0ME5qTXhPRGMyTW41LU1UVTFOalE1TWpRd016RTROSDV2WlRKWlZtcHRZWFZMTVc5dVVEUTRVRU5VUWtGb2RETi1mZyZjcmVhdGVfdGltZT0xNTU2NDkyNDMxJm5vbmNlPTAuMjczNTYxNDkyNTgxODU4MTMmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTU1OTA4NDQzMSZpbml0aWFsX2xheW91dF9jbGFzc19saXN0PQ=="
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
@@ -1592,15 +1345,7 @@
 
   # ----------------------------TURNO-7-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
@@ -1612,15 +1357,7 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
+
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1638,16 +1375,6 @@
 
   # ----------------------------TURNO-8-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
-
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
   agenda.user2 = "MQUQFJVFZ" + "@cadeco.com"
@@ -1658,15 +1385,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1687,15 +1405,6 @@
 
   # ----------------------------TURNO-9-----------------------------------------------
 
-  sala = Sala.new
-  sala.id = 1
-  sala.nombre = "1"
-  sala.apikey = "46318722"
-  sala.sessionID = "2_MX40NjMxODcyMn5-MTU1NjQ5MTcyNTI2M35IUTJXVHZHWWdjbjQ5TVdOenlIZE5Obkp-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODcyMiZzaWc9YTk5ZDU5NzdjMTk1NGM5ZTM4NTZmZjdkZWZiM2Q1ZmFjMzJlMDQ1ODpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN5TW41LU1UVTFOalE1TVRjeU5USTJNMzVJVVRKWFZIWkhXV2RqYmpRNVRWZE9lbmxJWkU1T2JrcC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDA4Jm5vbmNlPTAuNDU2NjU0MDYxODc0MzU5MSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDA0JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "YLJMEKBUG" + "@cadeco.com"
@@ -1707,15 +1416,6 @@
   agenda.save
   # -------------------------------------------------------------------------
 
-  sala = Sala.new
-  sala.id = 2
-  sala.nombre = "2"
-  sala.apikey = "46318732"
-  sala.sessionID = "2_MX40NjMxODczMn5-MTU1NjQ5MTk2OTYzMX5COEwzT25lNEpRRTZld2N0M0pGZ0JuR0l-fg"
-  sala.token = "T1==cGFydG5lcl9pZD00NjMxODczMiZzaWc9ZjExMTI1Y2RjNGY0MGJhZDdmNWJiZGNkMTZkMDY4YTM4NDVmMDBiNDpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGN6TW41LU1UVTFOalE1TVRrMk9UWXpNWDVDT0V3elQyNWxORXBSUlRabGQyTjBNMHBHWjBKdVIwbC1mZyZjcmVhdGVfdGltZT0xNTU2NDkyMDE4Jm5vbmNlPTAuODU4OTE4NDE3NDY1ODU4NCZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg0MDE3JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
-  sala.minutos = 1800
-  sala.estado = "libre"
-  sala.save
 
   agenda = Llamadasprogramada.new
   agenda.user1 = "ZWXVKJGIZ" + "@cadeco.com"
@@ -1727,23 +1427,15 @@
   agenda.save
   # ------------------------FIN-TURNO-9-----------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  sala = Sala.new
+  sala.id = 9
+  sala.nombre = "9"
+  sala.apikey = "46318812"
+  sala.sessionID = "2_MX40NjMxODgxMn5-MTU1NjQ5MzIyMDM5NH5PSnhGYXJVV0VMQUsrNXpjeTdaWDdIUkJ-fg"
+  sala.token = "T1==cGFydG5lcl9pZD00NjMxODgxMiZzaWc9ZDdmMDlkNmFmZTU0ZTlkMWI3NjQxODcyODVhMDhjNjU1MTU5MTA3NzpzZXNzaW9uX2lkPTJfTVg0ME5qTXhPRGd4TW41LU1UVTFOalE1TXpJeU1ETTVOSDVQU25oR1lYSlZWMFZNUVVzck5YcGplVGRhV0RkSVVrSi1mZyZjcmVhdGVfdGltZT0xNTU2NDkzMjM4Jm5vbmNlPTAuODYwMjM3NTQ0MDkxODk1OSZyb2xlPXB1Ymxpc2hlciZleHBpcmVfdGltZT0xNTU5MDg1MjM4JmluaXRpYWxfbGF5b3V0X2NsYXNzX2xpc3Q9"
+  sala.minutos = 1800
+  sala.estado = "libre"
+  sala.save
 
 
 
