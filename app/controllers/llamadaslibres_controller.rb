@@ -36,7 +36,7 @@ end
   # GET /llamadaslibres
   # GET /llamadaslibres.json
   def index
-     @llamadasEntrantes = Llamadaslibre.where("idReceptor = ?", current_user.id)
+     @llamadasEntrantes = Llamadaslibre.all
   end
 
   # GET /llamadaslibres/1
