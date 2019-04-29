@@ -19,7 +19,7 @@ def contestar
   @llamada = Llamadaslibre.find(params[:idllamada])
   @llamada.estado = "conectado"
   @llamada.save
-  redirect_to "/salas/"+@llamada.idSala
+  redirect_to "/salas/" + @llamada.idSala
 end
 
 
