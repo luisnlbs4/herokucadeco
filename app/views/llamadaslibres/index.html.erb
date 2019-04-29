@@ -12,12 +12,15 @@
     </thead>
     <tbody>
       <% @llamadasEntrantes.each do |llamadaslibrer| %>
+
+       <% if llamadaslibrer.idReceptor == current_user.id %>
         <tr>
           <td><strong>Llamadas de :</strong></td>
           <td><%= llamadaslibrer.idEmisor %></td>
           <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibrer.id %>">Contestar</a>
           <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibrer.id %>" > Rechazar </a></td>
         </tr>
+        <%end%>
       <% end %>
     </tbody>
   </table>
