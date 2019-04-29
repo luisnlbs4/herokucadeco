@@ -11,12 +11,12 @@
       </tr>
     </thead>
     <tbody>
-      <% @llamadas.each do |llamadaslibre| %>
+      <% @llamadasEntrantes.each do |llamadaslibrer| %>
         <tr>
           <td><strong>Llamadas de :</strong></td>
-          <td><%= llamadaslibre.idEmisor %></td>
-          <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibre.id %>">Contestar</a>
-          <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibre.id %>" > Rechazar </a></td>
+          <td><%= llamadaslibrer.idEmisor %></td>
+          <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibrer.id %>">Contestar</a>
+          <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibrer.id %>" > Rechazar </a></td>
         </tr>
       <% end %>
     </tbody>

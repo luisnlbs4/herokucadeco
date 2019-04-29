@@ -6,7 +6,6 @@ class LlamadaslibresController < ApplicationController
 
 
 def rechazar
-
   @llamada = Llamadaslibre.find(params[:idllamada])
   @llamada.estado = "rechazado"
   @llamada.save
@@ -37,9 +36,7 @@ end
   # GET /llamadaslibres
   # GET /llamadaslibres.json
   def index
-    if (Llamadaslibre.exists?(idReceptor: current_user.id))
-     @llamadas = Llamadaslibre.where("idReceptor = ?", current_user.id)
-    end
+     @llamadasEntrantes = Llamadaslibre.where("idReceptor = ?", current_user.id)
   end
 
   # GET /llamadaslibres/1
