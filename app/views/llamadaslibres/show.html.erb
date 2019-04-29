@@ -1,47 +1,6 @@
 
-
-
-
-<script type="text/javascript">
-  function myFunction() {
-    <% if (Llamadaslibre.exists?(id: params[:id])) %>
-    <% @llamada = Llamadaslibre.find(@llamadaslibre.id)%>
-    <% if @llamada.estado == "conectado" %>
-    <% @idSala = @llamada.idSala %>
-       <% @llamada.destroy %>
-       refrescar("/salas/<%=  @idSala %>")
-    <% end %>
-    <% if @llamada.estado == "rechazado" %>
-     <% @sala =  Sala.find(@llamada.idSala)%>
-     <% @sala.estado = "libre" %>
-     <% @sala.save %>
-      <% Llamadaslibre.destroy(@llamadaslibre.id) %>
-      refrescar("/llamadaslibres")
-    <% end %>
-    <% end %>
-};
-
-function refrescar(url){
-    window.location.href= url
-};
-  var i = setInterval(function() { myFunction(); }, 200);
-</script>
-
-<script type="text/javascript">
-  function reload() {
-    <% if (Llamadaslibre.exists?(id: params[:id])) %>
-      window.location.href="/llamadaslibres/<%= @llamadaslibre.id %>"
-    <% else %>
-      window.location.href= "/users/index"
-    <%end%>
-  };
-  var i = setInterval(function() { reload(); }, 500);
-</script>
-
 <h1> Esperando ......... </h1>
 
 <% if (Llamadaslibre.exists?(id: params[:id])) %>
 <a href="/llamada/colgar/<%= @llamadaslibre.id %>" class="btn btn-danger">Colgar</a>
 <%end%>
-
-<p>

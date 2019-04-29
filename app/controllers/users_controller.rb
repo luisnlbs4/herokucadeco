@@ -43,7 +43,7 @@ class UsersController < ApplicationController
       @llamada.save
       redirect_to "/llamadaslibres/"+(@llamada.id).to_s and return
     else
-      redirect_to "/"
+      redirect_to "/" and return
     end
   end
 
@@ -80,6 +80,6 @@ class UsersController < ApplicationController
       userNew.demanda = userJSON["emdemanda"]
       userNew.save
     end
-    redirect_to "/users/all"
+    redirect_to "/users/all" and return
   end
 end

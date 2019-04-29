@@ -45,6 +45,21 @@ end
   # GET /llamadaslibres/1
   # GET /llamadaslibres/1.json
   def show
+    if Llamadaslibre.exists?(id: params[:id])
+        @llamada = Llamadaslibre.find(@llamadaslibre.id)
+      if @llamada.estado == "conectado"
+          @idSala = @llamada.idSala
+          @llamada.destroy
+          redirect_to "/salas/" + @idSala
+      end
+      if @llamada.estado == "rechazado"
+        @sala =  Sala.find(@llamada.idSala)
+        @sala.estado = "libre"
+        @sala.save
+        Llamadaslibre.destroy(@llamadaslibre.id)
+        redirect_to "/llamadaslibres"
+      end
+    end
   end
 
   # GET /llamadaslibres/new
