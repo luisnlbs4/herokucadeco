@@ -1,5 +1,5 @@
 class LlamadaslibresController < ApplicationController
-  before_action :set_llamadaslibre, only: [:show, :edit, :update, :destroy]
+  before_action :set_llamadaslibre, only: [:show, :edit, :update, :destroy, :index]
 
 
 
