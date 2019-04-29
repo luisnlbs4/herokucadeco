@@ -36,11 +36,11 @@ class UsersController < ApplicationController
       @llamada.idEmisor = current_user.id
       @llamada.idReceptor = params[:idemisor]
       @llamada.estado = "espera"
-      @llamada.idSala = (@sala.id).to_s
-      @llamada.save
       @sala  = @salas.order("minutos DESC").first
       @sala.estado = "ocupado"
+      @llamada.idSala = (@sala.id).to_s
       @sala.save
+      @llamada.save
       redirect_to "/llamadaslibres/"+(@llamada.id).to_s and return
     else
       redirect_to "/" and return
