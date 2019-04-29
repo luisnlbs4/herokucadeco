@@ -1,11 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+# #
+# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+# #   Character.create(name: 'Luke', movie: movies.first)
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
   user = User.new
 	user.email = "admin@cadeco.com"
 	user.password = "Secreto123"
@@ -15,9 +15,9 @@
   user.tipo = "admin"
   user.estado = "inactivo"
 	user.save
-
-
-
+#
+#
+#
   user = User.new
   user.email = "jeyson@cadeco.com"
   user.password = "Secreto123"
@@ -38,7 +38,7 @@
   user.estado = "inactivo"
   user.save
 
-
+#
   user = User.new
   user.email = "TFLIRDVAL0" + "@cadeco.com"
   user.password = "PJSEZDALV"
@@ -821,7 +821,7 @@
   user.save
 
 
-
+#
   sala = Sala.new
   sala.id = 1
   sala.nombre = "1"
@@ -1399,10 +1399,6 @@
 
 
 
-
-
-
-
   # ----------------------------TURNO-9-----------------------------------------------
 
 
@@ -1436,6 +1432,284 @@
   sala.minutos = 1800
   sala.estado = "libre"
   sala.save
+
+
+  #-------------------------INSCRITAS-VIRTUAL-------------------
+
+user = User.new
+user.email = "AFZFPFQHC" + "@cadeco.com"
+user.password = "ZAOPSHRMK"
+user.password_confirmation = "ZAOPSHRMK"
+user.nombre = "MUEBLES SANTIAGO S.R.L."
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "AV. AYACUCHO ESQ. MÉXICO"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "COCHABAMBA"
+user.telefono = "77498400 - (591) 4 4258179"
+user.fax = ""
+user.correo = "ftorrico@gmail.com"
+user.paginaweb = "ftorrico@gmail.com"
+user.oferta = "MUEBLES DE MADERA PARA HOGAR Y OFICINAS. MARCOS Y PUERTAS PARA CONSTRUCCIONES CAJONERÍA DE COCINA, ROPEROS EMPOTRADOS"
+user.demanda = "MADERA, AGLOMERADOS Y MELAMÍNICOS  TINTES PARA MADERA, BARNIZ, FONDO, SELLADOR. ESPONJAS, TAPICES Y CUEROS"
+user.save
+
+
+user = User.new
+user.email = "YLJMEKBUG" + "@cadeco.com"
+user.password = "JFDAQXYPE"
+user.password_confirmation = "JFDAQXYPE"
+user.nombre = "GRUPO EMPRESARIAL VALENCIA SRL"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "KM 18.5 CARRETERA A ORURO"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "COCHABAMBA"
+user.telefono = "(591) 4 4265641 - 70717770"
+user.fax = "(591) 4 4260265"
+user.correo = "gerencia@gruval.com"
+user.paginaweb = ""
+user.oferta = "Productos naturales farmaceuticos  Productos naturales energeticos (barras, cereales, Bebidas, etc.)"
+user.demanda = "Productos naturales farmaceuticos Materias primas para energeticos naturales Energeticos naturales"
+user.save
+
+
+user = User.new
+user.email = "ZGQJNESKQ" + "@cadeco.com"
+user.password = "IXDHNATTP"
+user.password_confirmation = "IXDHNATTP"
+user.nombre = "ENDULCE SRL"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "SALAMANCA ENTRE LANZA Y ANTEZANA"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "COCHABAMBA"
+user.telefono = "(591) 4 4520368 - 70396761"
+user.fax = ""
+user.correo = ""
+user.paginaweb = ""
+user.oferta = "Productos naturales farmaceuticos  Productos naturales energeticos (barras, cereales, Bebidas, etc.)"
+user.demanda = "Productos naturales farmaceuticos Materias primas para energeticos naturales Energeticos naturales"
+user.save
+
+
+user = User.new
+user.email = "KDGXSEFHB" + "@cadeco.com"
+user.password = "WJEXAJYDW"
+user.password_confirmation = "WJEXAJYDW"
+user.nombre = "EMPRESA MINERA CONCORDIA SRL."
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "CALLE FIGUEROA EDIFICIO LIMA 4TO PISO OF. 3"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "La Paz"
+user.telefono = "(591) 74350167"
+user.fax = ""
+user.correo = "eric88enterprise@gmail.com"
+user.paginaweb = ""
+user.oferta = "- FORMA DE PAGO EN ORO EN LINGOTE - FORMA DE PAGO EN DINERO EN EFECTIVO"
+user.demanda = "- INVERSIÓN EN DINERO EN EFECTIVO - INVERSION EN MAQUINARIA PESADA"
+user.save
+
+user = User.new
+user.email = "UYRRFFEHZ" + "@cadeco.com"
+user.password = "MWBLRYXOS"
+user.password_confirmation = "MWBLRYXOS"
+user.nombre = "CREATEAM INTERNATIONAL SRL"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "AV. AYACUCHO 630 ENTRE REZA Y LA PAZ"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "COCHABAMBA"
+user.telefono = "(591) 4-4523349"
+user.fax = "(591) 4-4523246"
+user.correo = "jcviscarra@createam.com.bo"
+user.paginaweb = ""
+user.oferta = "- DISEÑO GRAFICO, PUBLICIDAD Y MARKETING - IMPRESION OFFSET, GIGANTOGRAFIA, LETREROS - VIDEOS, JINGLES, ORGANIZACION DE EVENTOS, STANDS FERIALES"
+user.demanda = ""
+user.save
+
+
+user = User.new
+user.email = "ZWXVKJGIZ" + "@cadeco.com"
+user.password = "WKPJZRNIO"
+user.password_confirmation = "WKPJZRNIO"
+user.nombre = "Fiambres y Embutidos 'BUEN GUSTO' "
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "Barrio Luis Pizarro, calles 15 de Septiembre y Pastos B"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "TARIJA"
+user.telefono = "(591) 4 4265641 - 70717770"
+user.fax = "(591) 4-6665724"
+user.correo = "fye.buengusto@gmail.com"
+user.paginaweb = ""
+user.oferta = "--Fiambres y embutidos en base a carne de llama - Chorizo pre cocido y ahumado, mortadela especial - Jamon y charque de llama"
+user.demanda = "-Selladora de bolsas, Ficheros - Bolsas impresas para sellado al vacío - Moledora de carne semi industrial"
+user.save
+
+
+
+user = User.new
+user.email = "NKDCZCUWQ" + "@cadeco.com"
+user.password = "FQREPVLLV"
+user.password_confirmation = "FQREPVLLV"
+user.nombre = "Semilleria Paulita"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "Av. Prolongacion Illampu # 21"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "La Paz"
+user.telefono = "(591) 4 -2379753 - 76544948"
+user.fax = "(591) 4 -2370226"
+user.correo = "semilleriapaulita@yahoo.com.ar"
+user.paginaweb = "semilleriapaulita@yahoo.com.ar"
+user.oferta = "- semillas de pastos para campos deportivos - semillas de pastos para jardines - Semillas de flores de corte"
+user.demanda = "- productos agrícolas en general - semillas de hortalizas"
+user.save
+
+
+user = User.new
+user.email = "YJYCIIOFJ" + "@cadeco.com"
+user.password = "DFWMTEVQB"
+user.password_confirmation = "DFWMTEVQB"
+user.nombre = "FIDEOS CHAMICOLA"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "CALLE FINAL REGIMIENTO MARZANA S/N"
+user.pais = "BOLIVIA"
+user.region = ""
+user.ciudad = "TARIJA"
+user.telefono = "(591) 4- 6636669"
+user.fax = ""
+user.correo = ""
+user.paginaweb = ""
+user.oferta = "-Fideo Pasta Larga Tallarín - La Sagña - Ravioles y Tapitas de Empanada"
+user.demanda = "- Cajas de cartón - Cajas de plástico"
+user.save
+
+#---------------------FIN-INSCRITAS-VIRTUAL------------
+
+
+#-------------------------INSCRITAS-EEUU-----------------
+
+user = User.new
+user.email = "TFLIRDVAL" + "@cadeco.com"
+user.password = "PJSEZDALV"
+user.password_confirmation = "PJSEZDALV"
+user.nombre = "Alan Horn"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "1934 Old Gallows Road"
+user.pais = "ESTADOS UNIDOS"
+user.region = ""
+user.ciudad = "Tysons Corners"
+user.telefono = "2024870444"
+user.fax = ""
+user.correo = "alan@horizonbrokers.com"
+user.paginaweb = "http://horizonbrokers.com"
+user.oferta = "Assistance to buy, sell or value a business"
+user.demanda = "Retail and Service Businesses For Sale"
+user.save
+
+
+user = User.new
+user.email = "FABNAHOYY" + "@cadeco.com"
+user.password = "TGOZUDUNF"
+user.password_confirmation = "TGOZUDUNF"
+user.nombre = "Susana Marino"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = ""
+user.pais = "ESTADOS UNIDOS"
+user.region = ""
+user.ciudad = "Rockville"
+user.telefono = "2024689044"
+user.fax = ""
+user.correo = "susana@horizonbrokers"
+user.paginaweb = "http://horizonbrokers.com"
+user.oferta = "Compra de Negocios en Virginia, Maryland y Washington DC"
+user.demanda = "Busco Personas que quieran comprar un negocio y conseguir una visa de inversionistas en EEUU"
+user.save
+
+user = User.new
+user.email = "HCNHGGGUR" + "@cadeco.com"
+user.password = "GHSQEXGYG"
+user.password_confirmation = "GHSQEXGYG"
+user.nombre = "Luis Buentello"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "22590 Willington Sq"
+user.pais = "ESTADOS UNIDOS"
+user.region = ""
+user.ciudad = "Ashburn"
+user.telefono = "6154037735"
+user.fax = ""
+user.correo = "lbuentello@beaconassociates.org"
+user.paginaweb = "www.beaconassociates.org"
+user.oferta = "Global Recruiting"
+user.demanda = "HR Consulting"
+user.save
+
+user = User.new
+user.email = "SIWCCALAD" + "@cadeco.com"
+user.password = "NXPPHGSWU"
+user.password_confirmation = "NXPPHGSWU"
+user.nombre = "Erick Rivera"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "8150 Leesburg Pike #405"
+user.pais = "ESTADOS UNIDOS"
+user.region = ""
+user.ciudad = "Vienna"
+user.telefono = "7035689449"
+user.fax = ""
+user.correo = "erivera@citylendinginc.com"
+user.paginaweb = "http://www.citylendinginc.com/"
+user.oferta = "Mortgage Lending, Bienes y Raíces, inversiones"
+user.demanda = "Atraer inversiones"
+user.save
+
+user = User.new
+user.email = "TDFATAHMI" + "@cadeco.com"
+user.password = "PZCHSODEV"
+user.password_confirmation = "PZCHSODEV"
+user.nombre = "Jasmine Moawad Barrientos"
+user.apellido = ""
+user.tipo = "normal"
+user.estado = "inactivo"
+user.direccion = "8509 WESTWOOD CENTER DR"
+user.pais = "ESTADOS UNIDOS"
+user.region = ""
+user.ciudad = "VIENNA"
+user.telefono = "5712886330"
+user.fax = ""
+user.correo = "jmoawad@moawad.us"
+user.paginaweb = "http://Ladyj.org/"
+user.oferta = "Visas para inversionista, EB5, locacion de negocio,apertura de franquicias en Estados Unidos visa L1, visas de trabajo ,de artista y pregumtas de inmigración en general"
+user.demanda = "Informacion de Inversiones"
+user.save
+
+#----------------------FIN---INSCRITAS-EEUU-----------------
 
 
 
