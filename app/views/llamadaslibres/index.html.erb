@@ -13,7 +13,7 @@
     <tbody>
       <% @llamadasEntrantes.each do |llamadaslibrer| %>
 
-       <% if llamadaslibrer.idReceptor == current_user.id %>
+       <% if llamadaslibrer.idReceptor == (current_user.id).to_s %>
         <tr>
           <td><strong>Llamadas de :</strong></td>
           <td><%= llamadaslibrer.idEmisor %></td>
