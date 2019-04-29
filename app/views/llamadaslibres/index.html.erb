@@ -1,7 +1,8 @@
+<script>setTimeout('document.location.reload()',10000); </script>
 <div class="container">
-  <h1>Llamadaslibres</h1>
-  <a class="btn btn-primary" href="/llamadaslibres"> Refrescar</a>
-  <hr>
+  <br>
+  <h1>Lista de Notificaciones: </h1>
+  <br>
   <table class= "table">
     <thead>
       <tr>
@@ -15,10 +16,68 @@
 
        <% if llamadaslibrer.idReceptor == (current_user.id).to_s %>
         <tr>
-          <td><strong>Llamadas de :</strong></td>
-          <td><%= llamadaslibrer.idEmisor %></td>
-          <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibrer.id %>">Contestar</a>
-          <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibrer.id %>" > Rechazar </a></td>
+          <td><strong>Llamada de :</strong></td>
+          <% @userR = User.find(llamadaslibrer.idEmisor )%>
+          <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= @userR.id %>" ><i class="fa fa-eye"></i></button>  <%= @userR.nombre %></td>
+          <td><a  class= " btn btn-success" href="/llamada/contestar/<%= llamadaslibrer.id %>"><i class="fa fa-phone"></i> Contestar</a>
+          <a  class= " btn btn-danger" href="/llamada/rechazar/<%= llamadaslibrer.id %>" ><i class="fa fa-phone"></i> Rechazar </a></td>
+
+          <div class="modal fade" id="Modal<%= @userR.id %>" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title"><%= @userR.nombre %></h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label><strong>Direccion:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.direccion %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Pais:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.pais %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Estado o Región:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.region %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Ciudad:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.ciudad %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Telefono:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.telefono %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Fax:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.fax %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Correo Electronico:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.correo %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Pagina Web:</strong></label>
+                    <input type="text" class="form-control" value="<%= @userR.paginaweb %>" readonly>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Oferta:</strong></label>
+                    <textarea class="form-control" rows="4" readonly><%= @userR.oferta %></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label><strong>Demanda:</strong></label>
+                    <textarea class="form-control" rows="4" readonly><%= @userR.demanda %></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+
         </tr>
         <%end%>
       <% end %>

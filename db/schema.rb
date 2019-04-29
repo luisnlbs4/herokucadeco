@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_28_172015) do
+ActiveRecord::Schema.define(version: 2019_04_29_081817) do
 
   create_table "llamadaslibres", force: :cascade do |t|
     t.string "idEmisor"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_04_28_172015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "estado"
+    t.string "cadena"
   end
 
   create_table "users", force: :cascade do |t|

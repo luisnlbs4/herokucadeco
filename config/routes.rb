@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'users/logout'
   get 'users/activar'
 
+
   get '/users/all' => 'users#all'
   get 'users/index'
   get '/users/resfresh' => 'users#refresh'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   resources :salas
   root to: "home#index"
   get '/users/crearllamada/:idemisor' => 'users#crearllamada'
+  get '/users/colgarsala/:idsala' => 'users#colgarsala'
+
 
   get '/llamada/rechazar/:idllamada' => 'llamadaslibres#rechazar'
   get '/llamada/contestar/:idllamada' => 'llamadaslibres#contestar'

@@ -2,10 +2,29 @@
 <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
+<style>
+.float{
+    position:fixed;
+    width:80px;
+    height:80px;
+    bottom:10px;
+    right:20px;
+    background-color: red;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+  }
+
+  .my-float{
+    margin-top:32px;
+  }
+</style>
+
 <script>
     var apiKey =  "<%= @sala.apikey %>";
     var sessionId = "<%= @sala.sessionID %>";
     var token = "<%= @sala.token %>";
+    var contador = 0
 
     var session = TB.initSession(sessionId);
     TB.setLogLevel(TB.DEBUG);
@@ -16,20 +35,28 @@
     session.connect(apiKey,token);
     function sessionConnectedHandler(event){
         session.publish("myPublisher");
+        console.log("-----sessionConnectedHandler-----");
+        console.log(event.streams.length);
         for (var i = 0; i < event.streams.length; i++) {
             if (session.connection.connectionId != event.streams[i].connection.connectionId) {
                 subscribeToStream(event.streams[i]);
             }
-
         }
+        console.log("-----contador------")
+        contador = contador + 1
+        console.log(contador)
     }
     function streamCreatedHandler(event){
+      console.log("-----streamCreatedHandler-----");
+      console.log(event.streams.length);
         for (var i = 0; i < event.streams.length; i++) {
             if (session.connection.connectionId != event.streams[i].connection.connectionId) {
                 subscribeToStream(event.streams[i]);
             }
-
         }
+        console.log("-----contador------")
+        contador = contador + 1
+        console.log(contador)
     }
 
     function subscribeToStream(stream){
@@ -38,17 +65,18 @@
         document.body.appendChild(div);
         session.subscribe(stream, div.id);
     }
+
 </script>
 
 
 <div class="container">
 
-  <h1 class="text-center"><%= @sala.nombre %></h1>
-  <h5><strong>Minutos:</strong><%= @sala.minutos %></h5>
+  <h1>Llamadas Libres</h1><br>
+  (Se recomienda colgar la llamada y no salir de la ventana)
   <hr>
-
-  <div class="container" id="myPublisher"></div>
-  <%= link_to 'Colgar', salas_path , class: "btn btn-danger btn-block" %>
-
-
 </div>
+  <div class="container" id="myPublisher"></div>
+
+  <a href="/users/colgarsala/<%= @sala.id %>" class="float">
+    <i class="fa fa-phone my-float"></i>
+  </a>

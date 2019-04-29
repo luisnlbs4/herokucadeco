@@ -28,6 +28,21 @@ class UsersController < ApplicationController
   end
 
 
+  def colgarsala
+      @sala = Sala.find(params[:idsala])
+      @sala.cadena = @sala.cadena.remove("%" + (current_user.id).to_s)
+      if (@sala.cadena == "")
+          @sala.estado ="libre"
+      end
+      @sala.save
+
+      @user = User.find(current_user.id)
+      @user.estado = "libre"
+      @user.save
+      redirect_to "/" and return
+  end
+
+
 
   def crearllamada
     @salas = Sala.where("estado = ?", "libre")

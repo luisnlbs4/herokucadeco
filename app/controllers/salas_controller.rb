@@ -1,5 +1,5 @@
 class SalasController < ApplicationController
-  before_action :set_sala, only: [:show, :edit, :update, :destroy]
+  before_action :set_sala, only: [:show, :edit, :update, :destroy ]
 
   # GET /salas
   # GET /salas.json
@@ -10,6 +10,16 @@ class SalasController < ApplicationController
   # GET /salas/1
   # GET /salas/1.json
   def show
+    @sala.estado = "ocuapado"
+    @sala.cadena ||= ''
+    @sala.cadena = @sala.cadena.remove("%" + (current_user.id).to_s)
+    @sala.cadena = @sala.cadena + "%" + (current_user.id).to_s
+    @sala.save
+
+    @user = User.find(current_user.id)
+    @user.estado = "ocupado"
+    @user.save
+
   end
 
   # GET /salas/new

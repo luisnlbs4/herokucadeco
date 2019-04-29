@@ -265,6 +265,7 @@
         }
         if(<%= @llamadasprogramada.horafin.strftime("%M") %> == minutes){
           window.location.href="/llamadasprogramadas"
+          window.open("http://www.cadeco.org/cam/rueda1/formulariodecitas.php?empresa=<%=@user1.nombre%>&empresa1=<%=@user2.nombre%>", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=200,left=500,width=800,height=800");
         }
       }
     }
