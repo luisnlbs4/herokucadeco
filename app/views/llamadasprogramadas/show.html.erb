@@ -1,4 +1,4 @@
-<% if current_user.email == @llamadasprogramada.user2 || current_user.email == @llamadasprogramada.user1 %>
+<% if current_user.email == (@llamadasprogramada.user2).downcase) || current_user.email == (@llamadasprogramada.user1).downcase %>
 
 <% if ((Time.now.strftime("%Y-%m-%d") == @llamadasprogramada.fecha.strftime("%Y-%m-%d")) && (@llamadasprogramada.horaini.strftime("%H:%M") <= Time.now.strftime("%H:%M")) && (@llamadasprogramada.horafin.strftime("%H:%M") > Time.now.strftime("%H:%M")))%>
 
@@ -105,13 +105,13 @@
 </head>
 <body>
 
-  <% @user1 = User.where("email = ?",  @llamadasprogramada.user1 ).first %>
-  <% @user2 = User.where("email = ?",  @llamadasprogramada.user2 ).first %>
+  <% @user1 = User.where("email = ?",  (@llamadasprogramada.user1).downcase ).first %>
+  <% @user2 = User.where("email = ?", ( @llamadasprogramada.user2).downcase ).first %>
 
   <div class="text-center">
     <h4>Hora Actual: </h4><h2 id='clock' class='the-clock'></h2>
   </div><br>
-  <%  if current_user.email == @llamadasprogramada.user2 %>
+  <%  if current_user.email == (@llamadasprogramada.user2).downcase %>
       <button type="button" class="btn btn-primary btn-block container" name="button" data-toggle="modal" data-target="#Modaluser1"><%= @user1.nombre %></button>
         <div class="modal fade" id="Modaluser1" role="dialog">
           <div class="modal-dialog modal-lg">
