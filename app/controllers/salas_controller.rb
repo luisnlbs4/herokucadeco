@@ -79,6 +79,6 @@ class SalasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sala_params
-      params.require(:sala).permit(:nombre, :apikey, :sessionID, :token, :minutos)
+      params.require(:sala).permit(:nombre, :apikey, :sessionID, :token, :minutos , :cadena, :estado)
     end
 end
