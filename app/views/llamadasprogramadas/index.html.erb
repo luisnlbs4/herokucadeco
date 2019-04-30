@@ -1,3 +1,6 @@
+<% if user_signed_in? == true%>
+
+
 <div class="container">
 
 <h1>Mi Agenda: </h1> (Se recomienda que su hora este en hora de Bolivia : <%= Time.now.strftime("%H:%M") %>)
@@ -184,3 +187,6 @@
   </tbody>
 </table>
 </div>
+<%else%>
+<meta http-equiv="refresh" content="0; url= /users/sign_in" />
+<%end%>
