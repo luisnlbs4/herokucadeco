@@ -835,10 +835,10 @@
   agenda = Llamadasprogramada.new
   agenda.user1 = "TFLIRDVAL" + "@cadeco.com"
   agenda.user2 = "NMLDBIJLN" + "@cadeco.com"
-  agenda.idSala = "1"
+  agenda.idSala = "9"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("10:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -855,10 +855,10 @@
   agenda = Llamadasprogramada.new
   agenda.user1 = "FABNAHOYY" + "@cadeco.com"
   agenda.user2 = "KDGXSEFHB" + "@cadeco.com"
-  agenda.idSala = "2"
+  agenda.idSala = "9"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("10:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -877,8 +877,8 @@
   agenda.user2 = "TFLIRDVAL0" + "@cadeco.com"
   agenda.idSala = "3"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("12:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("13:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -897,8 +897,8 @@
   agenda.user2 = "AEWWCNVFL" + "@cadeco.com"
   agenda.idSala = "4"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("11:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("12:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -917,8 +917,8 @@
   agenda.user2 = "TFYYXFXGO" + "@cadeco.com"
   agenda.idSala = "5"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("11:00", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:30", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -937,8 +937,8 @@
   agenda.user2 = "YMBFNIKCN" + "@cadeco.com"
   agenda.idSala = "6"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("10:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -957,8 +957,8 @@
   agenda.user2 = "HCNHGGGUR0" + "@cadeco.com"
   agenda.idSala = "7"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("10:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # -------------------------------------------------------------------------
 
@@ -977,8 +977,8 @@
   agenda.user2 = "LXDSRAXWC" + "@cadeco.com"
   agenda.idSala = "8"
   agenda.fecha =  DateTime.strptime("04/30/2019 00:00", "%m/%d/%Y %H:%M")
-  agenda.horaini = Time.zone.strptime("9:00", "%H:%M")
-  agenda.horafin = Time.zone.strptime("9:30", "%H:%M")
+  agenda.horaini = Time.zone.strptime("10:30", "%H:%M")
+  agenda.horafin = Time.zone.strptime("11:00", "%H:%M")
   agenda.save
   # ------------------------FIN-TURNO-1-----------------------------------------------
 
@@ -1081,16 +1081,6 @@
   agenda.horafin = Time.zone.strptime("10:00", "%H:%M")
   agenda.save
   # ------------------------FIN-TURNO-2-----------------------------------------------
-
-
-
-
-
-
-
-
-
-
 
 
   # ----------------------------TURNO-3-----------------------------------------------
