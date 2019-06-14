@@ -96,6 +96,20 @@ class UsersController < ApplicationController
       userNew.demanda = userJSON["emdemanda"]
       userNew.save
     end
+
+    @llamadas = Llamadasprogramada.delete_all
+    responseA = HTTParty.get('http://www.cadeco.org/cam/rueda1/app/agenda1.php')
+    @json = JSON.parse(responseA.body)
+    @json.each do |agendaJSON|
+      agenda = Llamadasprogramada.new
+      agenda.user1 =  agendaJSON["usuario"] + "@cadeco.com"
+      agenda.user2 =  agendaJSON["usuario1"] + "@cadeco.com"
+      agenda.idSala = agendaJSON["amesa"]
+      agenda.fecha =  DateTime.strptime(agendaJSON["tfecha"] + " 00:00", "%d/%m/%Y %H:%M")
+      agenda.horaini = Time.zone.strptime(agendaJSON["thora"], "%H:%M")
+      agenda.horafin = Time.zone.strptime(agendaJSON["thora1"], "%H:%M")
+      agenda.save
+    end
     redirect_to "/users/all" and return
   end
 
