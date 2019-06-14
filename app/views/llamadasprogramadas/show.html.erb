@@ -64,7 +64,8 @@
         function sessionConnectedHandler(event){
             var publisherOptions = {
                 width: '50%',
-                height: '100%'
+                height: '100%',
+                showControls: false,
             };
 
 
@@ -94,6 +95,7 @@
             var subscriptor = {
                width: '50%',
                height: '100%',
+               showControls: false,
             };
             var div = document.createElement('div');
             div.setAttribute('id','stream-' + stream.streamId);

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/users/all' => 'users#all'
   get 'users/index'
   get '/users/resfresh' => 'users#refresh'
+  get '/users/refreshAgenda' => 'users#refreshAgenda'
   get '/users/cambio' => 'users#cambio'
 
 

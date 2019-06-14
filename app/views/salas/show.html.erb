@@ -34,7 +34,12 @@
 
     session.connect(apiKey,token);
     function sessionConnectedHandler(event){
-        session.publish("myPublisher");
+
+      var publisherOptions = {
+          showControls: false,
+      };
+
+        session.publish("myPublisher",publisherOptions);
         console.log("-----sessionConnectedHandler-----");
         console.log(event.streams.length);
         for (var i = 0; i < event.streams.length; i++) {
@@ -60,10 +65,13 @@
     }
 
     function subscribeToStream(stream){
+      var publisherOptions = {
+          showControls: false,
+      };
         var div = document.createElement('div');
         div.setAttribute('id','stream-' + stream.streamId);
         document.body.appendChild(div);
-        session.subscribe(stream, div.id);
+        session.subscribe(stream, div.id,publisherOptions);
     }
 
 </script>

@@ -6,6 +6,9 @@
 <h1>Mi Agenda: </h1> (Se recomienda que su hora este en hora de Bolivia : <%= Time.now.strftime("%H:%M") %>)
 <br><br>
 <input type="button" class="btn btn-primary" value="Recargar pagina" onClick="document.location.reload(true)">
+<% if current_user.tipo == "admin"%>
+<a href="/users/refreshAgenda" class="btn btn-primary"> <i class="fa fa-refresh" aria-hidden="true"></i> Cargar lista</a>
+<% end %>
 <hr>
 <label>Hora Actual de su computador: </label> <h2 id='clock' class='the-clock'></h2>
 
@@ -40,6 +43,15 @@
 </script>
 <table class="table">
   <thead>
+    <% if current_user.tipo == "admin"%>
+    <tr>
+      <th>Fecha: </th>
+      <th>Hora Inicial:</th>
+      <th>Hora Fin: </th>
+      <th>Empresa1:</th>
+      <th>Empresa2:</th>
+    </tr>
+    <%else%>
     <tr>
       <th></th>
       <th>Fecha: </th>
@@ -47,6 +59,7 @@
       <th>Hora Fin: </th>
       <th>Empresa:</th>
     </tr>
+    <%end%>
   </thead>
 
   <tbody>
@@ -64,7 +77,8 @@
         <%  @user1 = User.where("email = ?", (llamadasprogramada.user1).downcase ).first%>
         <%  @user2 = User.where("email = ?", (llamadasprogramada.user2).downcase ).first%>
         <% if current_user.email == (llamadasprogramada.user2).downcase%>
-        <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#Modal<%= @user1.id %>"><i class="fa fa-eye"></i></button>
+        <% if  @user1 %>
+        <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#ModalI<%= @user2.id %>"><i class="fa fa-eye"></i></button>
          <%= @user1.nombre %></td>
 
          <div class="modal fade" id="Modal<%= @user1.id %>" role="dialog">
@@ -121,9 +135,14 @@
              </div>
            </div>
          </div>
+        <% else %>
+        <td>ejemplo</td>
+        <%end%>
+
+
 
          <%else%>
-
+        <% if  @user2 %>
         <td><button type="button" class="btn btn-primary btn-sm"  data-toggle="modal" data-target="#ModalI<%= @user2.id %>"><i class="fa fa-eye"></i></button>
          <%= @user2.nombre %></td>
          <div class="modal fade" id="ModalI<%= @user2.id %>" role="dialog">
@@ -180,10 +199,32 @@
              </div>
            </div>
          </div>
-         <%end%>
+        <% else %>
+        <td>ejemplo</td>
+        <%end%>
+        <% end %>
+        <% end %>
       </tr>
+      <%if current_user.tipo == "admin"%>
+      <tr>
+      <td><%= llamadasprogramada.fecha.strftime("%Y-%m-%d") %></td>
+      <td><%= llamadasprogramada.horaini.strftime("%H:%M") %></td>
+      <td><%= llamadasprogramada.horafin.strftime("%H:%M") %></td>
+        <%  @user1a = User.where("email = ?", (llamadasprogramada.user1).downcase ).first %>
+        <%  @user2a = User.where("email = ?", (llamadasprogramada.user2).downcase ).first %>
+      <% if @user1a.nombre %>
+      <td><%= @user1a.nombre %></td>
+      <% else %>
+        <td>ejemplo</td>
+      <% end %>
+      <% if @user2a %>
+      <td><%= @user2a.nombre %></td>
+      <% else %>
+        <td>ejemplo</td>
+      <% end %>
+      </tr>
+      <%end%>
     <% end %>
-    <%end%>
   </tbody>
 </table>
 </div>

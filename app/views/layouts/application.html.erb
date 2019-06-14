@@ -59,15 +59,17 @@
         <i class="fa fa-code" aria-hidden="true"></i> Opciones
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#"><i class="fa fa-phone" aria-hidden="true"></i> Llamadas</a>
+          <a class="dropdown-item" href="/llamadasprogramadas"><i class="fa fa-phone" aria-hidden="true"></i> Llamadas</a>
           <a class="dropdown-item" href="/users/all"><i class="fa fa-users" aria-hidden="true"></i> Usuarios</a>
           <a class="dropdown-item" href="/users/cambio"><i class="fa fa-users" aria-hidden="true"></i> ON or OFF llamadas</a>
 
       </li>
       <% end %>
+      <% if current_user.tipo != "admin"%>
       <li class="nav-item">
         <a class="nav-link" href="/llamadasprogramadas"><i class="fa fa-calendar" aria-hidden="true"></i> Mi Agenda</a>
       </li>
+      <%end%>
       <% @ver = User.where("email = ?", "admin@cadeco.com").first %>
       <% if @ver.apellido == "Activo" %>
       <li class="nav-item">
